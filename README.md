@@ -8,7 +8,7 @@
 
 <img src="https://raw.githubusercontent.com/d0x-dev/AirFlix/refs/heads/main/uploads/preview1.png" alt="AirFlix Preview 1" width="100%"/>
 <br>
-<img src="https://raw.githubusercontent.com/d0x-dev/AirFlix/refs/heads/main/uploads/preview2.png" alt="AirFlix Preview 2" width="100%"/>
+
 
 ### 🚀 Advanced Ad-Free Media Streaming Experience
 
@@ -35,6 +35,8 @@
 - 🧩 **Create Custom Sources** - Build and integrate your own media providers.
 
 ---
+
+<img src="https://raw.githubusercontent.com/d0x-dev/AirFlix/refs/heads/main/uploads/preview2.png" alt="AirFlix Preview 2" width="100%"/>
 
 ## 🌐 Get Started
 
