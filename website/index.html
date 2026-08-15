@@ -268,7 +268,7 @@
                 <!-- Mockup -->
                 <div class="flex-1 relative">
                     <div class="relative z-10 rounded-lg overflow-hidden glass-card p-4 ambient-glow transform lg:rotate-3">
-                        <img src="https://raw.githubusercontent.com/d0x-dev/AirFlix/refs/heads/main/uploads/preview1.png" alt="AirFlix App Preview" class="w-full rounded-DEFAULT" onerror="this.src='https://raw.githubusercontent.com/d0x-dev/AirFlix/refs/heads/main/uploads/nonbg.png'">
+                        <img src="img/homescreen.jpg" alt="AirFlix App Preview" class="w-full rounded-DEFAULT" onerror="this.src='https://raw.githubusercontent.com/d0x-dev/AirFlix/refs/heads/main/uploads/nonbg.png'">
                     </div>
                     <div class="absolute -top-10 -left-10 w-32 h-32 bg-tertiary-container/20 rounded-full blur-2xl"></div>
                 </div>
@@ -494,21 +494,34 @@
 
                                     <div class="screenshots-viewport">
                                         <div id="screenshots-track" class="screenshots-track">
-                                            <article class="screenshots-slide ambient-glow" data-title="Immersive Player" data-description="Album artwork focus, expanded controls, and a visual hierarchy focused on the music.">
+
+                                            <article class="screenshots-slide ambient-glow" data-title="Home Screen" data-description="Browse top content, new releases, and personalized recommendations.">
                                                 <div class="screenshots-device-frame">
-                                                    <img alt="Player Screen" class="w-full h-full object-cover" src="https://raw.githubusercontent.com/d0x-dev/AirFlix/refs/heads/main/uploads/preview2.png">
+                                                    <img alt="Home Screen" class="w-full h-full object-cover" src="img/homescreen.jpg">
                                                 </div>
                                             </article>
 
-                                            <article class="screenshots-slide ambient-glow" data-title="Smart Library" data-description="Organized collections, visible search, and clear cards to explore your library faster.">
+                                            <article class="screenshots-slide ambient-glow" data-title="Search Screen" data-description="Find your favorite movies and shows instantly with our fast search engine.">
                                                 <div class="screenshots-device-frame">
-                                                    <img alt="Library Screen" class="w-full h-full object-cover" src="https://raw.githubusercontent.com/d0x-dev/AirFlix/refs/heads/main/uploads/preview1.png">
+                                                    <img alt="Search Screen" class="w-full h-full object-cover" src="img/searchscreen.jpg">
                                                 </div>
                                             </article>
 
-                                            <article class="screenshots-slide ambient-glow" data-title="Advanced Settings" data-description="Grouped preferences with clean composition and elevated Material 3 surfaces.">
+                                            <article class="screenshots-slide ambient-glow" data-title="Movie Details" data-description="Get rich information, cast details, and instantly start streaming.">
                                                 <div class="screenshots-device-frame">
-                                                    <img alt="Settings Screen" class="w-full h-full object-cover" src="https://raw.githubusercontent.com/d0x-dev/AirFlix/refs/heads/main/uploads/preview1.png">
+                                                    <img alt="Movie Screen" class="w-full h-full object-cover" src="img/moviescreen.jpg">
+                                                </div>
+                                            </article>
+
+                                            <article class="screenshots-slide ambient-glow" data-title="Immersive Player" data-description="High quality video player with subtitles, multiple audio tracks, and intuitive controls.">
+                                                <div class="screenshots-device-frame">
+                                                    <img alt="Player Screen" class="w-full h-full object-cover" src="img/playerscreen.jpg">
+                                                </div>
+                                            </article>
+
+                                            <article class="screenshots-slide ambient-glow" data-title="Settings" data-description="Customize your streaming experience, providers, and app preferences.">
+                                                <div class="screenshots-device-frame">
+                                                    <img alt="Settings Screen" class="w-full h-full object-cover" src="img/settingsscreen.jpg">
                                                 </div>
                                             </article>
                                         </div>
@@ -526,33 +539,54 @@
                             </div>
 
                             <aside class="screenshots-preview-rail" aria-label="Screenshot preview rail">
+
                                 <button type="button" class="screenshots-preview-card is-active" data-screenshot-index="0">
                                     <div class="screenshots-preview-thumb">
-                                        <img alt="Player preview" class="w-full h-full object-cover" src="https://raw.githubusercontent.com/d0x-dev/AirFlix/refs/heads/main/uploads/preview2.png">
+                                        <img alt="Home preview" class="w-full h-full object-cover" src="img/homescreen.jpg">
                                     </div>
                                     <div>
-                                        <p class="font-title-md text-on-surface">Immersive Player</p>
-                                        <p class="text-on-surface-variant text-sm mt-1">Playback focused experience.</p>
+                                        <p class="font-title-md text-on-surface">Home</p>
+                                        <p class="text-on-surface-variant text-sm mt-1">Discover content.</p>
                                     </div>
                                 </button>
 
                                 <button type="button" class="screenshots-preview-card" data-screenshot-index="1">
                                     <div class="screenshots-preview-thumb">
-                                        <img alt="Library preview" class="w-full h-full object-cover" src="https://raw.githubusercontent.com/d0x-dev/AirFlix/refs/heads/main/uploads/preview1.png">
+                                        <img alt="Search preview" class="w-full h-full object-cover" src="img/searchscreen.jpg">
                                     </div>
                                     <div>
-                                        <p class="font-title-md text-on-surface">Smart Library</p>
-                                        <p class="text-on-surface-variant text-sm mt-1">Clear access to playlists &amp; artists.</p>
+                                        <p class="font-title-md text-on-surface">Search</p>
+                                        <p class="text-on-surface-variant text-sm mt-1">Find anything quickly.</p>
                                     </div>
                                 </button>
 
                                 <button type="button" class="screenshots-preview-card" data-screenshot-index="2">
                                     <div class="screenshots-preview-thumb">
-                                        <img alt="Settings preview" class="w-full h-full object-cover" src="https://raw.githubusercontent.com/d0x-dev/AirFlix/refs/heads/main/uploads/preview1.png">
+                                        <img alt="Movie preview" class="w-full h-full object-cover" src="img/moviescreen.jpg">
                                     </div>
                                     <div>
-                                        <p class="font-title-md text-on-surface">Advanced Settings</p>
-                                        <p class="text-on-surface-variant text-sm mt-1">Deep customization controls.</p>
+                                        <p class="font-title-md text-on-surface">Movie Info</p>
+                                        <p class="text-on-surface-variant text-sm mt-1">Cast & details.</p>
+                                    </div>
+                                </button>
+
+                                <button type="button" class="screenshots-preview-card" data-screenshot-index="3">
+                                    <div class="screenshots-preview-thumb">
+                                        <img alt="Player preview" class="w-full h-full object-cover" src="img/playerscreen.jpg">
+                                    </div>
+                                    <div>
+                                        <p class="font-title-md text-on-surface">Video Player</p>
+                                        <p class="text-on-surface-variant text-sm mt-1">Stream in high quality.</p>
+                                    </div>
+                                </button>
+
+                                <button type="button" class="screenshots-preview-card" data-screenshot-index="4">
+                                    <div class="screenshots-preview-thumb">
+                                        <img alt="Settings preview" class="w-full h-full object-cover" src="img/settingsscreen.jpg">
+                                    </div>
+                                    <div>
+                                        <p class="font-title-md text-on-surface">Settings</p>
+                                        <p class="text-on-surface-variant text-sm mt-1">Customize preferences.</p>
                                     </div>
                                 </button>
                             </aside>
