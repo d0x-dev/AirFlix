@@ -27,6 +27,8 @@ const AppearancePreference = () => {
   const setPrimary = useThemeStore(state => state.setPrimary);
   const isPureBlack = useThemeStore(state => state.isPureBlack);
   const setPureBlack = useThemeStore(state => state.setPureBlack);
+  const useLinoteeFont = useThemeStore(state => state.useLinoteeFont);
+  const setUseLinoteeFont = useThemeStore(state => state.setUseLinoteeFont);
   const colors = useM3Colors();
   const [launcherIcon, setSelectedLauncherIcon] = useState<LauncherIcon>(() =>
     settingsStorage.getLauncherIcon(),
@@ -156,6 +158,14 @@ const AppearancePreference = () => {
           value={isPureBlack}
           onValueChange={enabled => {
             setPureBlack(enabled);
+          }}
+        />
+        <SettingsSwitchRow
+          title="Use system Default font"
+          description="If on, uses system default. If off, uses Linotee font everywhere."
+          value={!useLinoteeFont}
+          onValueChange={enabled => {
+            setUseLinoteeFont(!enabled);
           }}
         />
       </Surface>

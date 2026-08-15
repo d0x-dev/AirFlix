@@ -20,6 +20,7 @@ export enum SettingsKeys {
   LAUNCHER_ICON = 'launcherIcon',
   DYNAMIC_INFO_ACCENT = 'dynamicInfoAccent',
   PURE_BLACK_BACKGROUND = 'pureBlackBackground',
+  USE_LINOTEE_FONT = 'useLinoteeFont',
   // Feedback settings
   HAPTIC_FEEDBACK = 'hapticFeedback',
   NOTIFICATIONS_ENABLED = 'notificationsEnabled',
@@ -81,6 +82,14 @@ export class SettingsStorage {
 
   setCustomTheme(isCustom: boolean): void {
     mainStorage.setBool(SettingsKeys.IS_CUSTOM_THEME, isCustom);
+  }
+
+  isLinoteeFontEnabled(): boolean {
+    return mainStorage.getBool(SettingsKeys.USE_LINOTEE_FONT);
+  }
+
+  setLinoteeFontEnabled(enabled: boolean): void {
+    mainStorage.setBool(SettingsKeys.USE_LINOTEE_FONT, enabled);
   }
 
   getCustomColor(): string {

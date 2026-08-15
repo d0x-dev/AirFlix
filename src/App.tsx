@@ -1,5 +1,6 @@
 import useContentStore from './lib/zustand/contentStore';
 import React, {useEffect, useState} from 'react';
+import {useFonts} from 'expo-font';
 import './global.css';
 import Home from './screens/home/Home';
 import Info from './screens/home/Info';
@@ -175,6 +176,9 @@ export const openDownloadsScreen = (): void => {
 };
 
 const App = () => {
+  const [fontsLoaded] = useFonts({
+    'Linotee': require('../assets/fonts/Linotee.ttf'),
+  });
   const provider = useContentStore(state => state.provider);
   const {width: windowWidth} = useWindowDimensions();
   const isLargeScreen = windowWidth > 768;
@@ -595,7 +599,9 @@ const App = () => {
                     openDownloadsScreen();
                   }
                   // Hide bootsplash
-                  await BootSplash.hide({fade: true});
+                  if (fontsLoaded) {
+                    await BootSplash.hide({fade: true});
+                  }
                   // Track initial screen
                   if (hasFirebase) {
                     try {

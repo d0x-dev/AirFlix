@@ -13,10 +13,12 @@ export interface Theme {
   /** Where the Material 3 palette comes from: the device wallpaper or a curated seed. */
   source: AccentSource;
   isPureBlack: boolean;
+  useLinoteeFont: boolean;
   setPrimary: (type: Theme['primary']) => void;
   setCustom: (isCustom: boolean) => void;
   setSource: (source: AccentSource) => void;
   setPureBlack: (isPureBlack: boolean) => void;
+  setUseLinoteeFont: (enabled: boolean) => void;
 }
 
 const useThemeStore = create<Theme>()(
@@ -26,6 +28,7 @@ const useThemeStore = create<Theme>()(
       isCustom: settingsStorage.isCustomTheme(),
       source: settingsStorage.getAccentSource(),
       isPureBlack: settingsStorage.isPureBlackBackgroundEnabled(),
+      useLinoteeFont: settingsStorage.isLinoteeFontEnabled(),
 
       setPrimary: (primary: Theme['primary']) => {
         set({primary});
@@ -42,6 +45,10 @@ const useThemeStore = create<Theme>()(
       setPureBlack: (isPureBlack: boolean) => {
         set({isPureBlack});
         settingsStorage.setPureBlackBackgroundEnabled(isPureBlack);
+      },
+      setUseLinoteeFont: (useLinoteeFont: boolean) => {
+        set({useLinoteeFont});
+        settingsStorage.setLinoteeFontEnabled(useLinoteeFont);
       },
     }),
     {
