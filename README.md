@@ -1,14 +1,15 @@
-![airflix-high-resolution-logo-transparent](https://github.com/user-attachments/assets/b2eb446f-8e7f-4800-81e1-3320c82f33de)
-
 # AirFlix
-Android app for streaming media.
+
+An open-source Android application for streaming media without ads, natively built for performance and an immersive experience.
+
 ### Features
-- Stream and Download Ad-Free.
-- Multi Audio and external Subs support.
-- WatchList.
-- External player and Downloader support.
-- Sync with desktop app
-- Create custom sources.
+- **Stream and Download Ad-Free:** Enjoy media uninterrupted.
+- **Multi Audio & External Subs Support:** Customize your playback experience.
+- **WatchList:** Keep track of your favorite movies and shows.
+- **External Player & Downloader Support:** Flexibility to use your preferred tools.
+- **Sync with Desktop App:** Seamlessly handoff between mobile and desktop.
+- **Create Custom Sources:** Build and integrate your own media providers.
+
 <br>
 
 [![Discord](https://custom-icon-badges.demolab.com/badge/-Join_Discord-6567a5?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/cr42m6maWy)
@@ -24,15 +25,15 @@ ___
 ## AirFlix for Desktop 
 https://github.com/d0x-dev/AirFlix-Desktop
 
-
 <br>
 
 ## Add or Create Provider source
 > [!TIP]
 > Follow the guide here https://airflix.8man.in/guide/adding-providers
 
-##
-<img width="2712" height="1220" alt="Screenshot_2025-03-20-18-36-18-593_com airflix" src="https://github.com/user-attachments/assets/3befd3ef-81b1-417c-a250-42bbfbae58d6" />
+<br>
+
+<img width="2712" height="1220" alt="Screenshot of AirFlix App" src="https://github.com/user-attachments/assets/3befd3ef-81b1-417c-a250-42bbfbae58d6" />
 
 
 ___
@@ -48,42 +49,38 @@ ___
 [![React-Native-Video](https://custom-icon-badges.demolab.com/badge/React_native_video-38d9c9?style=for-the-badge&logo=video&logoColor=white)](https://thewidlarzgroup.github.io/react-native-video/)
 [![MMKV-Storage](https://custom-icon-badges.demolab.com/badge/MMKV_Storage-yellow?style=for-the-badge&logo=zap&logoColor=white)](https://github.com/mrousavy/react-native-mmkv)
 
-
-
 </p>
 
 ## Build and Dev
 0. Set-up React Native environment if you haven't already. [Guide](https://reactnative.dev/docs/set-up-your-environment)
 
-1. clone
-     ```bash
-     git clone https://github.com/d0x-dev/AirFlix.git
-     ```
-     ```
-     cd AirFlix
-     ```
-2. Install
-     ```
-     npm install
-     ```
-3. Prebuild
+1. Clone the repository
+   ```bash
+   git clone https://github.com/d0x-dev/AirFlix.git
+   cd AirFlix
    ```
-    npx expo prebuild -p android --clean
+2. Install dependencies
+   ```bash
+   npm install
    ```
-5. Open metro dev server
-Dev
-     ```
-     npm run android
-     ```
-Build apk/aab
+3. Prebuild Native Directories
+   ```bash
+   npx expo prebuild -p android --clean
+   ```
+5. Open Metro Dev Server
+   ```bash
+   npm run android
+   ```
+
+For building a signed APK or AAB, check the official documentation:
 https://reactnative.dev/docs/signed-apk-android
 
 ---
 > [!IMPORTANT]
-> AirFlix App does not host, store, or provide any media content. It is not affiliated with or connected to any external providers or extensions. All content accessed through the app is managed and sourced directly by the user via third-party tools or integrations. AirFlix App has no control over it.
+> **Disclaimer:** AirFlix App does not host, store, or provide any media content. It is not affiliated with or connected to any external providers or extensions. All content accessed through the app is managed and sourced directly by the user via third-party tools or integrations. The developers of AirFlix have no control over this content.
 
 
-## Leave a star if this was helpful
+## Leave a star if this was helpful!
 
 <a href="https://www.star-history.com/?repos=d0x-dev%2FAirFlix&type=date&legend=top-left">
  <picture>
