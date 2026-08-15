@@ -1,3 +1,4 @@
+import AppText from '../components/ui/Text';
 import React, {
   useState,
   useMemo,
@@ -128,7 +129,7 @@ const SeasonList: React.FC<SeasonListProps> = ({
   if (!LinkList || LinkList.length === 0) {
     return (
       <View className="p-4">
-        <Text className="text-white text-center">No Streams Available</Text>
+        <AppText className="text-white text-center">No Streams Available</AppText>
       </View>
     );
   }
@@ -854,14 +855,14 @@ const SeasonList: React.FC<SeasonListProps> = ({
         }}
         onPress={() => openExternalPlayer(item.link)}>
         <View>
-          <Text
+          <AppText
             className="text-lg capitalize font-bold"
             style={{color: CONTROL_TEXT}}>
             {item.server || `Server ${index + 1}`}
-          </Text>
-          <Text className="text-xs" style={{color: CONTROL_TEXT_MUTED}}>
+          </AppText>
+          <AppText className="text-xs" style={{color: CONTROL_TEXT_MUTED}}>
             {item.type ? `Format: ${item.type.toUpperCase()}` : ''}
-          </Text>
+          </AppText>
         </View>
         <MaterialCommunityIcons name="vlc" size={24} color={primary} />
       </TouchableOpacity>
@@ -905,13 +906,13 @@ const SeasonList: React.FC<SeasonListProps> = ({
   if (episodeError) {
     return (
       <View className="p-4">
-        <Text className="text-red-500 text-center">
+        <AppText className="text-red-500 text-center">
           {episodeError.message || 'Failed to load episodes. Please try again.'}
-        </Text>
+        </AppText>
         <TouchableOpacity
           className="mt-2 bg-red-600 p-2 rounded-md"
           onPress={() => refetchEpisodes()}>
-          <Text className="text-white text-center">Retry</Text>
+          <AppText className="text-white text-center">Retry</AppText>
         </TouchableOpacity>
       </View>
     );
@@ -1031,11 +1032,11 @@ const SeasonList: React.FC<SeasonListProps> = ({
         {filteredAndSortedEpisodes.length === 0 &&
           filteredAndSortedDirectLinks.length === 0 &&
           LinkList?.length === 0 && (
-            <Text
+            <AppText
               className="min-h-20 text-lg font-semibold"
               style={{color: colors.onSurfaceVariant}}>
               No stream found
-            </Text>
+            </AppText>
           )}
       </View>
 
@@ -1045,11 +1046,11 @@ const SeasonList: React.FC<SeasonListProps> = ({
           <Animated.View style={[vlcLoadingAnimatedStyle]}>
             <MaterialCommunityIcons name="vlc" size={70} color={primary} />
           </Animated.View>
-          <Text
+          <AppText
             className="mt-2 text-lg font-semibold"
             style={{color: colors.onSurface}}>
             Loading available servers...
-          </Text>
+          </AppText>
         </View>
       )}
 
@@ -1084,13 +1085,13 @@ const SeasonList: React.FC<SeasonListProps> = ({
               </View>
             )}
             <View style={{padding: 20}}>
-              <Text
+              <AppText
                 role="titleLarge"
                 style={{color: colors.onSurface, fontWeight: '700'}}>
                 {episodeDetails.title}
-              </Text>
+              </AppText>
               <ScrollView style={{maxHeight: 230}}>
-                <Text
+                <AppText
                   role="bodyMedium"
                   style={{
                     color: colors.onSurfaceVariant,
@@ -1098,7 +1099,7 @@ const SeasonList: React.FC<SeasonListProps> = ({
                     marginTop: 10,
                   }}>
                   {episodeDetails.description}
-                </Text>
+                </AppText>
               </ScrollView>
             </View>
           </>
@@ -1108,16 +1109,16 @@ const SeasonList: React.FC<SeasonListProps> = ({
       <MaterialDialogSurface
         visible={showServerModal}
         onDismiss={() => setShowServerModal(false)}>
-        <Text
+        <AppText
           className="mb-2 text-center text-xl font-bold"
           style={{color: colors.onSurface}}>
           Select External Player Server
-        </Text>
-        <Text
+        </AppText>
+        <AppText
           className="mb-4 text-center text-sm"
           style={{color: colors.onSurfaceVariant}}>
           {externalPlayerStreams.length} servers available
-        </Text>
+        </AppText>
 
         {isLoadingStreams ? (
           <ActivityIndicator size="large" color={primary} />
@@ -1128,11 +1129,11 @@ const SeasonList: React.FC<SeasonListProps> = ({
                 renderServerItem(item, index),
               )}
               {externalPlayerStreams.length === 0 && (
-                <Text
+                <AppText
                   className="p-4 text-center"
                   style={{color: colors.onSurfaceVariant}}>
                   No servers available
-                </Text>
+                </AppText>
               )}
             </ScrollView>
 
@@ -1143,11 +1144,11 @@ const SeasonList: React.FC<SeasonListProps> = ({
                 borderRadius: 18,
               }}
               onPress={() => setShowServerModal(false)}>
-              <Text
+              <AppText
                 className="text-center font-bold"
                 style={{color: colors.onSecondaryContainer}}>
                 Cancel
-              </Text>
+              </AppText>
             </TouchableOpacity>
           </>
         )}
@@ -1156,11 +1157,11 @@ const SeasonList: React.FC<SeasonListProps> = ({
       <MaterialDialogSurface
         visible={stickyMenu.active}
         onDismiss={() => setStickyMenu({active: false})}>
-        <Text
+        <AppText
           className="mb-4 text-xl font-bold"
           style={{color: colors.onSurface}}>
           Episode actions
-        </Text>
+        </AppText>
         <View style={{gap: 10}}>
           {isCompleted(stickyMenu.link || '') ? (
             <TouchableOpacity
@@ -1171,7 +1172,7 @@ const SeasonList: React.FC<SeasonListProps> = ({
               }}
               onPress={markAsUnwatched}>
               <Ionicons name="checkmark-done" size={30} color={primary} />
-              <Text style={{color: colors.onSurface}}>Mark as unwatched</Text>
+              <AppText style={{color: colors.onSurface}}>Mark as unwatched</AppText>
             </TouchableOpacity>
           ) : (
             <TouchableOpacity
@@ -1182,7 +1183,7 @@ const SeasonList: React.FC<SeasonListProps> = ({
               }}
               onPress={markAsWatched}>
               <Ionicons name="checkmark" size={25} color={primary} />
-              <Text style={{color: colors.onSurface}}>Mark as watched</Text>
+              <AppText style={{color: colors.onSurface}}>Mark as watched</AppText>
             </TouchableOpacity>
           )}
           <TouchableOpacity
@@ -1193,7 +1194,7 @@ const SeasonList: React.FC<SeasonListProps> = ({
             }}
             onPress={handleStickyMenuExternalPlayer}>
             <Feather name="external-link" size={20} color={primary} />
-            <Text style={{color: colors.onSurface}}>External player</Text>
+            <AppText style={{color: colors.onSurface}}>External player</AppText>
           </TouchableOpacity>
         </View>
       </MaterialDialogSurface>

@@ -1,3 +1,4 @@
+import AppText from '../components/ui/Text';
 import {MaterialCommunityIcons} from '@expo/vector-icons';
 import React from 'react';
 import {ActivityIndicator, Text, TouchableOpacity, View} from 'react-native';
@@ -58,7 +59,7 @@ const ProviderTestProgressDialog = ({
       visible={visible}
       dismissible={isFinished}
       onDismiss={onClose}>
-      <Text
+      <AppText
         style={{
           color: colors.onSurface,
           fontSize: 22,
@@ -69,8 +70,8 @@ const ProviderTestProgressDialog = ({
           : hasPassed
             ? 'Provider test passed'
             : 'Testing provider'}
-      </Text>
-      <Text
+      </AppText>
+      <AppText
         numberOfLines={1}
         style={{
           color: colors.onSurfaceVariant,
@@ -79,7 +80,7 @@ const ProviderTestProgressDialog = ({
           marginTop: 4,
         }}>
         {providerName}
-      </Text>
+      </AppText>
 
       <View className="gap-3">
         {stepLabels.map(({stage, label}) => {
@@ -116,23 +117,23 @@ const ProviderTestProgressDialog = ({
                   />
                 )}
               </View>
-              <Text
+              <AppText
                 className="flex-1 font-medium"
                 style={{color: colors.onSurface}}>
                 {label}
-              </Text>
-              <Text
+              </AppText>
+              <AppText
                 className="text-xs capitalize"
                 style={{color: colors.onSurfaceVariant}}>
                 {status}
-              </Text>
+              </AppText>
             </View>
           );
         })}
       </View>
 
       {resultMessage && (
-        <Text
+        <AppText
           testID="provider-test-result"
           className="mt-4 p-3 text-sm leading-5"
           style={{
@@ -145,7 +146,7 @@ const ProviderTestProgressDialog = ({
               : colors.onTertiaryContainer,
           }}>
           {resultMessage}
-        </Text>
+        </AppText>
       )}
 
       {isFinished && (
@@ -157,9 +158,9 @@ const ProviderTestProgressDialog = ({
             borderRadius: 18,
           }}
           onPress={onClose}>
-          <Text className="font-semibold" style={{color: primaryContentColor}}>
+          <AppText className="font-semibold" style={{color: primaryContentColor}}>
             Done
-          </Text>
+          </AppText>
         </TouchableOpacity>
       )}
     </MaterialDialogSurface>

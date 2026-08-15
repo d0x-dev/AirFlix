@@ -1,3 +1,4 @@
+import AppText from '../../../components/ui/Text';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import React from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
@@ -17,11 +18,11 @@ const MissingDownloadsSection = ({primary}: {primary: string}) => {
 
   return (
     <View className="mb-5">
-      <Text
+      <AppText
         className="mb-3 text-xl font-bold"
         style={{color: colors.onBackground}}>
         Missing Downloads
-      </Text>
+      </AppText>
       {missing.map(item => (
         <View
           key={item.id}
@@ -43,18 +44,18 @@ const MissingDownloadsSection = ({primary}: {primary: string}) => {
             />
           </View>
           <View className="ml-3 flex-1">
-            <Text
+            <AppText
               className="font-semibold"
               style={{color: colors.onErrorContainer}}
               numberOfLines={1}>
               {item.title}
-            </Text>
-            <Text
+            </AppText>
+            <AppText
               className="mt-1 text-xs"
               style={{color: colors.onErrorContainer}}
               numberOfLines={2}>
               {item.errorMessage}
-            </Text>
+            </AppText>
           </View>
           <TouchableOpacity
             onPress={() => removeDownload(item.id)}
@@ -63,11 +64,11 @@ const MissingDownloadsSection = ({primary}: {primary: string}) => {
               backgroundColor: colors.surfaceContainerHighest,
               borderRadius: 14,
             }}>
-            <Text
+            <AppText
               className="text-sm font-bold"
               style={{color: colors.onSurface}}>
               Remove
-            </Text>
+            </AppText>
           </TouchableOpacity>
         </View>
       ))}

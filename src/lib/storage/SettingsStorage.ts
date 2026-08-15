@@ -95,7 +95,7 @@ export class SettingsStorage {
   }
 
   isLinoteeFontEnabled(): boolean {
-    return mainStorage.getBool(SettingsKeys.USE_LINOTEE_FONT);
+    return mainStorage.getBool(SettingsKeys.USE_LINOTEE_FONT, true);
   }
 
   setLinoteeFontEnabled(enabled: boolean): void {

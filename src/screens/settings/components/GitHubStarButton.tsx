@@ -1,3 +1,4 @@
+import {AnimatedAppText} from '../../../components/ui/Text';
 import React, {useState} from 'react';
 import {Linking, TouchableOpacity, View} from 'react-native';
 import {AntDesign, Feather, MaterialCommunityIcons} from '@expo/vector-icons';
@@ -80,12 +81,12 @@ const GitHubStarButton = ({primary}: GitHubStarButtonProps) => {
                 </Animated.View>
               ))}
           </View>
-          <Animated.Text
+          <AnimatedAppText
             key={celebrating ? 'thanks' : 'star'}
             entering={FadeIn.duration(180)}
             className="text-white ml-3 text-base font-medium">
             {celebrating ? 'You are a star!' : 'Star Airflix on GitHub'}
-          </Animated.Text>
+          </AnimatedAppText>
         </View>
         <Feather name="external-link" size={20} color="gray" />
       </Animated.View>

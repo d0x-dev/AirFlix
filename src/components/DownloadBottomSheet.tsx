@@ -1,3 +1,4 @@
+import AppText from '../components/ui/Text';
 import {
   Text,
   TouchableOpacity,
@@ -72,7 +73,7 @@ const DownloadBottomSheet = ({
           paddingHorizontal: 16,
           paddingTop: 8,
         }}>
-        <Text
+        <AppText
           style={{
             color: colors.onSurface,
             fontSize: 20,
@@ -80,7 +81,7 @@ const DownloadBottomSheet = ({
             textAlign: 'center',
           }}>
           {title}
-        </Text>
+        </AppText>
         <View
           style={{
             alignSelf: 'center',
@@ -108,7 +109,7 @@ const DownloadBottomSheet = ({
                     paddingHorizontal: 20,
                     paddingVertical: 9,
                   }}>
-                  <Text
+                  <AppText
                     style={{
                       color: selected
                         ? colors.onSecondaryContainer
@@ -116,7 +117,7 @@ const DownloadBottomSheet = ({
                       fontWeight: selected ? '700' : '500',
                     }}>
                     {tab.label}
-                  </Text>
+                  </AppText>
                 </TouchableOpacity>
               );
             })
@@ -171,14 +172,14 @@ const DownloadBottomSheet = ({
                       onPressVideo(item);
                       bottomSheetRef.current?.close?.();
                     }}>
-                    <Text
+                    <AppText
                       style={{
                         color: colors.onSurface,
                         flex: 1,
                         fontWeight: '600',
                       }}>
                       {item.server}
-                    </Text>
+                    </AppText>
                     {item.quality ? (
                       <View
                         style={{
@@ -187,7 +188,7 @@ const DownloadBottomSheet = ({
                           paddingHorizontal: 10,
                           paddingVertical: 5,
                         }}>
-                        <Text
+                        <AppText
                           style={{
                             color: colors.onSecondaryContainer,
                             fontSize: 12,
@@ -196,7 +197,7 @@ const DownloadBottomSheet = ({
                           {item.quality.toLowerCase().endsWith('p')
                             ? item.quality
                             : `${item.quality}p`}
-                        </Text>
+                        </AppText>
                       </View>
                     ) : null}
                   </TouchableOpacity>
@@ -236,23 +237,23 @@ const DownloadBottomSheet = ({
                           });
                           bottomSheetRef.current?.close?.();
                         }}>
-                        <Text style={{color: colors.onSurface}}>
+                        <AppText style={{color: colors.onSurface}}>
                           {item.language}
                           {' - '} {item.title}
-                        </Text>
+                        </AppText>
                       </TouchableOpacity>
                     )),
                   )
                 : null}
           {streams.length === 0 && !loading && (
-            <Text
+            <AppText
               style={{
                 color: colors.error,
                 fontSize: 18,
                 textAlign: 'center',
               }}>
               {error || 'No server found'}
-            </Text>
+            </AppText>
           )}
         </BottomSheetScrollView>
       </BottomSheetView>

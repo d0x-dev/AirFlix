@@ -1,3 +1,4 @@
+import AppText from '../components/ui/Text';
 import {View, Text, ScrollView, TouchableOpacity} from 'react-native';
 import React from 'react';
 import useContentStore from '../lib/zustand/contentStore';
@@ -13,8 +14,8 @@ const ProviderDrawer = ({onClose}: {onClose: () => void}) => {
   return (
     <View className="flex-1" style={{backgroundColor: 'rgba(0,0,0,0.8)'}}>
       <View className="mt-10 px-4 pb-4 border-b border-white/10">
-        <Text className="text-white text-2xl font-bold">Select Provider</Text>
-        <Text className="text-gray-400 mt-1 text-sm">Content source</Text>
+        <AppText className="text-white text-2xl font-bold">Select Provider</AppText>
+        <AppText className="text-gray-400 mt-1 text-sm">Content source</AppText>
       </View>
 
       <ScrollView showsVerticalScrollIndicator={false} className="flex-1 px-2">
@@ -34,14 +35,14 @@ const ProviderDrawer = ({onClose}: {onClose: () => void}) => {
                 size={20}
                 color={provider.value === item.value ? primary : '#888'}
               />
-              <Text
+              <AppText
                 className={`ml-3 text-base ${
                   provider.value === item.value
                     ? 'text-white font-medium'
                     : 'text-gray-400'
                 }`}>
                 {item.display_name}
-              </Text>
+              </AppText>
             </View>
             {provider.value === item.value && (
               <MaterialIcons name="check" size={20} color={primary} />

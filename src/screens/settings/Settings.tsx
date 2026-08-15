@@ -1,3 +1,4 @@
+import {AnimatedAppText} from '../../components/ui/Text';
 import {
   DevSettings,
   ToastAndroid,
@@ -310,9 +311,9 @@ const Settings = ({navigation}: Props) => {
           <Pressable onPress={() => navigation.goBack()} style={({pressed}) => ({ opacity: pressed ? 0.7 : 1, padding: 4, marginLeft: -4 })}>
             <Ionicons name="arrow-back" size={28} color="#ffffff" />
           </Pressable>
-          <Animated.Text style={[{ color: '#ffffff', fontSize: 20, fontWeight: 'bold', marginLeft: 20 }, headerTextStyle]}>
+          <AnimatedAppText style={[{ color: '#ffffff', fontSize: 20, marginLeft: 20 }, headerTextStyle]}>
             Settings
-          </Animated.Text>
+          </AnimatedAppText>
         </View>
       </Animated.View>
 
@@ -333,7 +334,7 @@ const Settings = ({navigation}: Props) => {
         
         {/* Large Scrolling Header */}
         <View style={{ paddingHorizontal: 20, marginBottom: 24, marginTop: 10 }}>
-          <AppText role="headlineLarge" style={{ color: '#ffffff', fontWeight: 'bold', fontSize: 34 }}>
+          <AppText role="headlineLarge" style={{ color: '#ffffff', fontSize: 34 }}>
             Settings
           </AppText>
         </View>
@@ -363,7 +364,7 @@ const Settings = ({navigation}: Props) => {
                 <Image source={{ uri: 'airflix_vector' }} style={{ width: 40, height: 40, tintColor: '#a5c0ff' }} resizeMode="contain" />
               </View>
               <View className="justify-center">
-                <AppText role="titleLarge" style={{ color: '#ffffff', fontWeight: 'bold', fontSize: 22 }}>
+                <AppText role="titleLarge" style={{ color: '#ffffff', fontSize: 22 }}>
                   Airflix
                 </AppText>
                 <View
@@ -377,7 +378,7 @@ const Settings = ({navigation}: Props) => {
                   }}>
                   <AppText
                     role="labelSmall"
-                    style={{color: '#a5c0ff', fontWeight: 'bold'}}>
+                    style={{color: '#a5c0ff', }}>
                     v{Constants.expoConfig?.version || '1.0.0'}
                   </AppText>
                 </View>

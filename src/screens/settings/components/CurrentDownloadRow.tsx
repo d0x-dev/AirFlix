@@ -1,3 +1,4 @@
+import AppText from '../../../components/ui/Text';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import React from 'react';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
@@ -94,24 +95,24 @@ const CurrentDownloadRow = ({
         <View className="ml-3 flex-1">
           <View className="flex-row items-start justify-between gap-2">
             <View className="flex-1">
-              <Text
+              <AppText
                 className="text-base font-semibold"
                 style={{color: colors.onSurface}}
                 numberOfLines={2}>
                 {item.title}
-              </Text>
-              <Text
+              </AppText>
+              <AppText
                 className="mt-1 text-xs"
                 style={{color: colors.onSurfaceVariant}}
                 numberOfLines={1}>
                 {getSubtitle(item)}
-              </Text>
+              </AppText>
             </View>
-            <Text
+            <AppText
               className="text-xs font-medium"
               style={{color: failed ? colors.error : colors.onSurfaceVariant}}>
               {statusLabels[item.status]}
-            </Text>
+            </AppText>
           </View>
 
           <View className="mt-3">
@@ -120,20 +121,20 @@ const CurrentDownloadRow = ({
               color={failed ? colors.error : primary}
             />
             <View className="mt-2 flex-row justify-between">
-              <Text
+              <AppText
                 className="text-xs"
                 style={{color: colors.onSurfaceVariant}}>
                 {formatDownloadBytes(item.downloadedBytes)}
                 {item.totalBytes > 0
                   ? ` / ${formatDownloadBytes(item.totalBytes)}`
                   : ''}
-              </Text>
+              </AppText>
               {item.speed > 0 && (
-                <Text
+                <AppText
                   className="text-xs"
                   style={{color: colors.onSurfaceVariant}}>
                   {formatDownloadSpeed(item.speed)}
-                </Text>
+                </AppText>
               )}
             </View>
           </View>
@@ -141,9 +142,9 @@ const CurrentDownloadRow = ({
       </View>
 
       {failed && item.errorMessage && (
-        <Text className="mt-3 text-sm" style={{color: colors.error}}>
+        <AppText className="mt-3 text-sm" style={{color: colors.error}}>
           {item.errorMessage}
-        </Text>
+        </AppText>
       )}
 
       <View className="mt-3 flex-row justify-end gap-2">
@@ -162,11 +163,11 @@ const CurrentDownloadRow = ({
               size={18}
               color={colors.onSecondaryContainer}
             />
-            <Text
+            <AppText
               className="ml-1 text-sm font-bold"
               style={{color: colors.onSecondaryContainer}}>
               Start now
-            </Text>
+            </AppText>
           </TouchableOpacity>
         )}
         {item.canPause && item.status === 'downloading' && (
@@ -179,11 +180,11 @@ const CurrentDownloadRow = ({
               borderRadius: 14,
             }}>
             <MaterialCommunityIcons name="pause" size={18} color={primary} />
-            <Text
+            <AppText
               className="ml-1 text-sm font-medium"
               style={{color: colors.onSurface}}>
               Pause
-            </Text>
+            </AppText>
           </TouchableOpacity>
         )}
         {item.canResume && item.status === 'paused' && (
@@ -196,11 +197,11 @@ const CurrentDownloadRow = ({
               borderRadius: 14,
             }}>
             <MaterialCommunityIcons name="play" size={18} color={primary} />
-            <Text
+            <AppText
               className="ml-1 text-sm font-medium"
               style={{color: colors.onSurface}}>
               Resume
-            </Text>
+            </AppText>
           </TouchableOpacity>
         )}
         {failed && item.retryable && (
@@ -212,11 +213,11 @@ const CurrentDownloadRow = ({
               borderRadius: 14,
             }}>
             <MaterialCommunityIcons name="refresh" size={18} color={primary} />
-            <Text
+            <AppText
               className="ml-1 text-sm font-medium"
               style={{color: colors.onSurface}}>
               Retry
-            </Text>
+            </AppText>
           </TouchableOpacity>
         )}
         {canCancel && (
@@ -232,11 +233,11 @@ const CurrentDownloadRow = ({
               size={18}
               color={colors.onErrorContainer}
             />
-            <Text
+            <AppText
               className="ml-1 text-sm font-medium"
               style={{color: colors.onErrorContainer}}>
               Cancel
-            </Text>
+            </AppText>
           </TouchableOpacity>
         )}
       </View>

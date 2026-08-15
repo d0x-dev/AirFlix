@@ -1,3 +1,4 @@
+import AppText from '../components/ui/Text';
 import {View, Text, StatusBar, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {useState} from 'react';
@@ -103,7 +104,7 @@ const Tutorial = () => {
           color={colors.onSurfaceVariant}
           style={{marginBottom: 16}}
         />
-        <Text
+        <AppText
           style={{
             color: colors.onSurface,
             fontSize: 24,
@@ -112,8 +113,8 @@ const Tutorial = () => {
             marginBottom: 16,
           }}>
           No Provider Installed
-        </Text>
-        <Text
+        </AppText>
+        <AppText
           style={{
             color: colors.onSurfaceVariant,
             fontSize: 16,
@@ -123,7 +124,7 @@ const Tutorial = () => {
           }}>
           Connect your cloud provider to play network streams or play local
           content.
-        </Text>
+        </AppText>
         <TouchableOpacity
           onPress={handleGoToExtensions}
           className="px-6 py-3 rounded-xl w-full flex-row items-center justify-center"
@@ -133,7 +134,7 @@ const Tutorial = () => {
             size={20}
             color={colors.onPrimary}
           />
-          <Text
+          <AppText
             style={{
               color: colors.onPrimary,
               fontSize: 16,
@@ -141,7 +142,7 @@ const Tutorial = () => {
               marginLeft: 8,
             }}>
             Install Cloud Providers
-          </Text>
+          </AppText>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={handlePlayLocalFile}
@@ -156,7 +157,7 @@ const Tutorial = () => {
             size={20}
             color={colors.onSecondaryContainer}
           />
-          <Text
+          <AppText
             style={{
               color: colors.onSecondaryContainer,
               fontSize: 16,
@@ -164,7 +165,7 @@ const Tutorial = () => {
               marginLeft: 8,
             }}>
             Play local file
-          </Text>
+          </AppText>
         </TouchableOpacity>
       </Animated.View>
     </View>

@@ -1,3 +1,4 @@
+import AppText from '../components/ui/Text';
 import React from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 import useThemeStore from '../lib/zustand/themeStore';
@@ -14,17 +15,17 @@ export const ErrorFallback: React.FC<ErrorFallbackProps> = ({
   const {primary} = useThemeStore();
   return (
     <View className="flex-1 justify-center items-center p-4 bg-black">
-      <Text className="text-red-400 text-lg font-bold mb-4 text-center">
+      <AppText className="text-red-400 text-lg font-bold mb-4 text-center">
         Something went wrong
-      </Text>
-      <Text className="text-gray-400 text-sm mb-6 text-center">
+      </AppText>
+      <AppText className="text-gray-400 text-sm mb-6 text-center">
         {error.message || 'An unexpected error occurred'}
-      </Text>
+      </AppText>
       <TouchableOpacity
         onPress={resetError}
         className="px-6 py-3 rounded-lg"
         style={{backgroundColor: primary}}>
-        <Text className="text-white font-semibold">Try Again</Text>
+        <AppText className="text-white font-semibold">Try Again</AppText>
       </TouchableOpacity>
     </View>
   );

@@ -1,3 +1,4 @@
+import AppText from '../../components/ui/Text';
 import React, {useEffect, useState, useRef, useCallback, useMemo} from 'react';
 import {
   AppState,
@@ -1417,7 +1418,7 @@ const Player = ({route}: Props): React.JSX.Element => {
               <View className="mb-2">
                 <AnimatedHourglass sandColor={hourglassSandColor} />
               </View>
-              <Text className="text-white text-lg mt-4">Loading stream...</Text>
+              <AppText className="text-white text-lg mt-4">Loading stream...</AppText>
             </Animated.View>
           </View>
         </TouchableNativeFeedback>
@@ -1431,13 +1432,13 @@ const Player = ({route}: Props): React.JSX.Element => {
       <SafeAreaView className="bg-black flex-1 justify-center items-center">
         <StatusBar translucent={true} hidden={true} />
         <OrientationLocker orientation={LANDSCAPE} />
-        <Text className="text-red-500 text-lg text-center mb-4">
+        <AppText className="text-red-500 text-lg text-center mb-4">
           Failed to load stream. Please try again.
-        </Text>
+        </AppText>
         <TouchableOpacity
           className="bg-red-600 px-4 py-2 rounded-md"
           onPress={() => navigation.goBack()}>
-          <Text className="text-white">Go Back</Text>
+          <AppText className="text-white">Go Back</AppText>
         </TouchableOpacity>
       </SafeAreaView>
     );
@@ -1486,9 +1487,9 @@ const Player = ({route}: Props): React.JSX.Element => {
               size={24}
               color="white"
             />
-            <Text className="text-white text-sm capitalize opacity-80">
+            <AppText className="text-white text-sm capitalize opacity-80">
               {selectedStream?.server || 'Change server'}
-            </Text>
+            </AppText>
           </TouchableOpacity>
         </View>
       )}
@@ -1504,20 +1505,20 @@ const Player = ({route}: Props): React.JSX.Element => {
             style={controlsOpacityStyle}
             pointerEvents="none">
             {torrentState !== 'Fetching Metadata...' ? (
-              <Text className="text-white/70 text-[10px] mt-0.5">
+              <AppText className="text-white/70 text-[10px] mt-0.5">
                 {torrentDownloaded > 0
                   ? `${torrentDownloaded.toFixed(1)} MB`
                   : ''}
                 {torrentDownloadSpeed > 0
                   ? ` @ ${(torrentDownloadSpeed / 1024 / 1024).toFixed(1)} MB/s`
                   : ''}
-              </Text>
+              </AppText>
             ) : (
-              <Text className="text-white/90 text-xs font-medium">
+              <AppText className="text-white/90 text-xs font-medium">
                 {torrentState === 'Fetching Metadata...'
                   ? 'Fetching Metadata'
                   : ''}
-              </Text>
+              </AppText>
             )}
           </Animated.View>
         )}
@@ -1586,12 +1587,12 @@ const Player = ({route}: Props): React.JSX.Element => {
               size={24}
               color={BOTTOM_CONTROL_ICON_COLOR}
             />
-            <Text
+            <AppText
               className="capitalize text-xs text-white"
               style={BOTTOM_CONTROL_LABEL_STYLE}
               numberOfLines={1}>
               {audioTracks[selectedAudioTrackIndex]?.language || 'auto'}
-            </Text>
+            </AppText>
           </TouchableOpacity>
 
           {/* Subtitle controls */}
@@ -1606,14 +1607,14 @@ const Player = ({route}: Props): React.JSX.Element => {
               size={24}
               color={BOTTOM_CONTROL_ICON_COLOR}
             />
-            <Text
+            <AppText
               className="text-xs capitalize text-white"
               style={BOTTOM_CONTROL_LABEL_STYLE}
               numberOfLines={1}>
               {selectedTextTrackIndex === 1000
                 ? 'none'
                 : textTracks[selectedTextTrackIndex]?.language}
-            </Text>
+            </AppText>
           </TouchableOpacity>
 
           {/* Speed controls */}
@@ -1628,11 +1629,11 @@ const Player = ({route}: Props): React.JSX.Element => {
               size={24}
               color={BOTTOM_CONTROL_ICON_COLOR}
             />
-            <Text
+            <AppText
               className="text-white text-sm"
               style={BOTTOM_CONTROL_LABEL_STYLE}>
               {playbackRate === 1 ? '1.0' : playbackRate}
-            </Text>
+            </AppText>
           </TouchableOpacity>
 
           {/* PIP */}
@@ -1647,11 +1648,11 @@ const Player = ({route}: Props): React.JSX.Element => {
                 size={24}
                 color={BOTTOM_CONTROL_ICON_COLOR}
               />
-              <Text
+              <AppText
                 className="text-white text-xs"
                 style={BOTTOM_CONTROL_LABEL_STYLE}>
                 PIP
-              </Text>
+              </AppText>
             </TouchableOpacity>
           )}
 
@@ -1667,12 +1668,12 @@ const Player = ({route}: Props): React.JSX.Element => {
               size={24}
               color={BOTTOM_CONTROL_ICON_COLOR}
             />
-            <Text
+            <AppText
               className="text-xs text-white capitalize"
               style={BOTTOM_CONTROL_LABEL_STYLE}
               numberOfLines={1}>
               {selectedPlayerQuality.label}
-            </Text>
+            </AppText>
           </TouchableOpacity>
 
           {/* Resize button */}
@@ -1684,7 +1685,7 @@ const Player = ({route}: Props): React.JSX.Element => {
               size={25}
               color={BOTTOM_CONTROL_ICON_COLOR}
             />
-            <Text
+            <AppText
               className="text-white text-sm min-w-[38px]"
               style={BOTTOM_CONTROL_LABEL_STYLE}
               numberOfLines={1}>
@@ -1695,7 +1696,7 @@ const Player = ({route}: Props): React.JSX.Element => {
                   : resizeMode === ResizeMode.STRETCH
                     ? 'Stretch'
                     : 'Contain'}
-            </Text>
+            </AppText>
           </TouchableOpacity>
 
           {/* Next episode button */}
@@ -1707,12 +1708,12 @@ const Player = ({route}: Props): React.JSX.Element => {
               <TouchableOpacity
                 className="min-w-0 flex-1 flex-row items-center justify-center"
                 onPress={handleNextEpisode}>
-                <Text
+                <AppText
                   className="text-white text-base"
                   style={BOTTOM_CONTROL_LABEL_STYLE}
                   numberOfLines={1}>
                   Next
-                </Text>
+                </AppText>
                 <MaterialCommunityIcons
                   name="skip-next-outline"
                   size={26}
@@ -1728,9 +1729,9 @@ const Player = ({route}: Props): React.JSX.Element => {
         style={[toastStyle]}
         pointerEvents="none"
         className="absolute w-full top-12 justify-center items-center px-2">
-        <Text className="text-white bg-black/50 p-2 rounded-full text-base">
+        <AppText className="text-white bg-black/50 p-2 rounded-full text-base">
           {toastMessage}
-        </Text>
+        </AppText>
       </Animated.View>
 
       {/* Settings Modal */}
@@ -1754,14 +1755,14 @@ const Player = ({route}: Props): React.JSX.Element => {
             {/* Audio Tab */}
             {activeTab === 'audio' && (
               <ScrollView className="w-full h-full p-1 px-4">
-                <Text className="mb-2 text-lg font-bold text-center text-white">
+                <AppText className="mb-2 text-lg font-bold text-center text-white">
                   Audio
-                </Text>
+                </AppText>
                 {audioTracks.length === 0 && (
                   <View className="flex justify-center items-center">
-                    <Text className="text-white text-xs">
+                    <AppText className="text-white text-xs">
                       Loading audio tracks...
-                    </Text>
+                    </AppText>
                   </View>
                 )}
                 {audioTracks.map((track, i) => (
@@ -1797,9 +1798,9 @@ const Player = ({route}: Props): React.JSX.Element => {
                 data={textTracks}
                 ListHeaderComponent={
                   <View>
-                    <Text className="mb-2 text-lg font-bold text-center text-white">
+                    <AppText className="mb-2 text-lg font-bold text-center text-white">
                       Subtitle
-                    </Text>
+                    </AppText>
                     <PlayerMenuRow
                       title="Disabled"
                       selected={selectedTextTrackIndex === 1000}
@@ -1891,9 +1892,9 @@ const Player = ({route}: Props): React.JSX.Element => {
                 <ScrollView
                   className="border-r border-white/10"
                   contentContainerStyle={{paddingRight: 8}}>
-                  <Text className="mb-2 w-full text-center text-white text-lg font-extrabold">
+                  <AppText className="mb-2 w-full text-center text-white text-lg font-extrabold">
                     Server
-                  </Text>
+                  </AppText>
                   {streamData?.length > 0 &&
                     streamData?.map((track, i) => (
                       <PlayerMenuRow
@@ -1930,9 +1931,9 @@ const Player = ({route}: Props): React.JSX.Element => {
                 </ScrollView>
 
                 <ScrollView contentContainerStyle={{paddingLeft: 8}}>
-                  <Text className="mb-2 w-full text-center text-white text-lg font-extrabold">
+                  <AppText className="mb-2 w-full text-center text-white text-lg font-extrabold">
                     Quality
-                  </Text>
+                  </AppText>
 
                   {videoTracks &&
                     videoTracks.map((track: any, i: any) => (
@@ -1964,9 +1965,9 @@ const Player = ({route}: Props): React.JSX.Element => {
             {/* Speed Tab */}
             {activeTab === 'speed' && (
               <ScrollView className="w-full h-full p-1 px-4">
-                <Text className="mb-2 text-lg font-bold text-center text-white">
+                <AppText className="mb-2 text-lg font-bold text-center text-white">
                   Playback Speed
-                </Text>
+                </AppText>
                 {playbacks.map((rate, i) => (
                   <PlayerMenuRow
                     key={i}

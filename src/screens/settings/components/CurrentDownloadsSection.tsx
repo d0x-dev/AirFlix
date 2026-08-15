@@ -1,3 +1,4 @@
+import AppText from '../../../components/ui/Text';
 import React from 'react';
 import {Text, View} from 'react-native';
 import {
@@ -24,22 +25,22 @@ const CurrentDownloadsSection = ({primary}: {primary: string}) => {
   return (
     <View className="mb-5">
       <View className="mb-3 flex-row items-center justify-between">
-        <Text
+        <AppText
           className="text-xl font-bold"
           style={{color: colors.onBackground}}>
           Current Downloads
-        </Text>
+        </AppText>
         <View
           className="min-w-8 items-center px-2 py-1"
           style={{
             backgroundColor: colors.secondaryContainer,
             borderRadius: 12,
           }}>
-          <Text
+          <AppText
             className="text-xs font-bold"
             style={{color: colors.onSecondaryContainer}}>
             {downloads.length}
-          </Text>
+          </AppText>
         </View>
       </View>
       {downloads.map(item => (

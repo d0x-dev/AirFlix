@@ -1,3 +1,4 @@
+import {AnimatedAppText} from '../../components/ui/Text';
 import React, {useState, useEffect} from 'react';
 import {
   View,
@@ -545,9 +546,9 @@ const Extensions = ({navigation}: Props) => {
             <Pressable onPress={() => navigation.goBack()} style={({pressed}) => ({ opacity: pressed ? 0.7 : 1, padding: 4, marginLeft: -4 })}>
               <Ionicons name="arrow-back" size={28} color="#ffffff" />
             </Pressable>
-            <Animated.Text style={[{ color: '#ffffff', fontSize: 20, fontWeight: 'bold', marginLeft: 20 }, headerTextStyle]}>
+            <AnimatedAppText style={[{ color: '#ffffff', fontSize: 20, marginLeft: 20 }, headerTextStyle]}>
               Provider Manager
-            </Animated.Text>
+            </AnimatedAppText>
           </View>
         </Animated.View>
 
@@ -562,7 +563,7 @@ const Extensions = ({navigation}: Props) => {
         ListHeaderComponent={
           <>
             <View style={{ paddingHorizontal: 20, marginBottom: 24, marginTop: 10 }}>
-              <AppText role="headlineLarge" style={{ color: '#ffffff', fontWeight: 'bold', fontSize: 34 }}>
+              <AppText role="headlineLarge" style={{ color: '#ffffff', fontSize: 34 }}>
                 Providers
               </AppText>
             </View>

@@ -1,3 +1,4 @@
+import AppText from '../components/ui/Text';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import React, {useEffect, useState} from 'react';
 import {Image, TouchableOpacity, View} from 'react-native';
@@ -106,15 +107,15 @@ const EpisodeRowContent = ({
         </View>
       )}
       <View className="min-w-0 flex-1">
-        <Text
+        <AppText
           role="titleMedium"
           numberOfLines={descriptionText ? 1 : 2}
           style={{color: textColor}}>
           {title}
-        </Text>
+        </AppText>
         {descriptionText ? (
           <View style={{marginTop: 2, position: 'relative'}}>
-            <Text
+            <AppText
               role="bodySmall"
               numberOfLines={2}
               onLayout={event => {
@@ -144,7 +145,7 @@ const EpisodeRowContent = ({
               style={{color: mutedTextColor}}>
               {visibleDescription}
               {descriptionTruncated ? '…' : ''}
-            </Text>
+            </AppText>
             {descriptionTruncated && onShowDetails && morePosition ? (
               <TouchableOpacity
                 accessibilityLabel={`Show full description for ${title}`}
@@ -162,15 +163,15 @@ const EpisodeRowContent = ({
                   top: morePosition.top,
                   zIndex: 2,
                 }}>
-                <Text
+                <AppText
                   role="bodySmall"
                   style={{color: mutedTextColor, fontWeight: '700'}}>
                   more
-                </Text>
+                </AppText>
               </TouchableOpacity>
             ) : null}
             {descriptionWidth > 0 ? (
-              <Text
+              <AppText
                 accessible={false}
                 pointerEvents="none"
                 role="bodySmall"
@@ -202,7 +203,7 @@ const EpisodeRowContent = ({
                   width: descriptionWidth,
                 }}>
                 {descriptionText}
-              </Text>
+              </AppText>
             ) : null}
           </View>
         ) : null}

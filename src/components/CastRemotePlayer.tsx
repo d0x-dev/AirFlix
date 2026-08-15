@@ -1,3 +1,4 @@
+import AppText from '../components/ui/Text';
 import React, {useCallback, useMemo, useState} from 'react';
 import {
   ImageBackground,
@@ -158,13 +159,13 @@ const CastRemotePlayer = ({
             <MaterialIcons name="arrow-back" size={27} color="white" />
           </TouchableOpacity>
           <View className="flex-1">
-            <Text className="text-white text-lg font-semibold" numberOfLines={1}>
+            <AppText className="text-white text-lg font-semibold" numberOfLines={1}>
               {title || 'Airflix'}
-            </Text>
+            </AppText>
             {!!subtitle && (
-              <Text className="text-white/65 text-xs mt-0.5" numberOfLines={1}>
+              <AppText className="text-white/65 text-xs mt-0.5" numberOfLines={1}>
                 {subtitle}
-              </Text>
+              </AppText>
             )}
           </View>
         </View>
@@ -184,22 +185,22 @@ const CastRemotePlayer = ({
           style={{backgroundColor: `${accentColor}33`}}>
           <MaterialIcons name="cast-connected" size={42} color={accentColor} />
         </View>
-        <Text className="text-white/65 text-sm">Playing on</Text>
-        <Text className="text-white text-2xl font-semibold mt-1" numberOfLines={1}>
+        <AppText className="text-white/65 text-sm">Playing on</AppText>
+        <AppText className="text-white text-2xl font-semibold mt-1" numberOfLines={1}>
           {deviceLabel}
-        </Text>
-        <Text
+        </AppText>
+        <AppText
           className="text-white/80 text-base mt-3 max-w-[70%] text-center"
           numberOfLines={2}>
           {subtitle || title}
-        </Text>
+        </AppText>
       </View>
 
       <View className="absolute left-8 right-8 bottom-5 rounded-3xl bg-black/75 border border-white/10 px-6 py-4">
         <View className="flex-row items-center">
-          <Text className="text-white/70 text-xs w-14">
+          <AppText className="text-white/70 text-xs w-14">
             {formatTime(streamPosition)}
-          </Text>
+          </AppText>
           <Pressable
             accessibilityRole="adjustable"
             accessibilityLabel="Cast playback position"
@@ -213,9 +214,9 @@ const CastRemotePlayer = ({
               />
             </View>
           </Pressable>
-          <Text className="text-white/70 text-xs w-14 text-right">
+          <AppText className="text-white/70 text-xs w-14 text-right">
             {formatTime(duration)}
-          </Text>
+          </AppText>
         </View>
 
         <View className="flex-row items-center justify-center mt-2 gap-7">
@@ -254,7 +255,7 @@ const CastRemotePlayer = ({
             onPress={stopCasting}
             className="absolute right-0 flex-row items-center rounded-full bg-white/10 px-4 h-11">
             <MaterialIcons name="stop-circle" size={22} color="white" />
-            <Text className="text-white text-xs ml-2">Stop casting</Text>
+            <AppText className="text-white text-xs ml-2">Stop casting</AppText>
           </TouchableOpacity>
         </View>
       </View>

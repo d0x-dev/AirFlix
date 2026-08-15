@@ -1,4 +1,5 @@
 import useContentStore from './lib/zustand/contentStore';
+import useThemeStore from './lib/zustand/themeStore';
 import React, {useEffect, useState} from 'react';
 import {useFonts} from 'expo-font';
 import './global.css';
@@ -178,6 +179,7 @@ export const openDownloadsScreen = (): void => {
 const App = () => {
   const [fontsLoaded] = useFonts({
     'Linotee': require('../assets/fonts/Linotee.ttf'),
+    'BebasNeue': require('../assets/fonts/BebasNeue.ttf'),
   });
   const provider = useContentStore(state => state.provider);
   const {width: windowWidth} = useWindowDimensions();
@@ -637,19 +639,19 @@ const App = () => {
                   fonts: {
                     regular: {
                       fontFamily: useLinoteeFont ? 'Linotee' : 'Inter_400Regular',
-                      fontWeight: useLinoteeFont ? undefined : '400',
+                      fontWeight: (useLinoteeFont ? undefined : '400') as any,
                     },
                     medium: {
                       fontFamily: useLinoteeFont ? 'Linotee' : 'Inter_500Medium',
-                      fontWeight: useLinoteeFont ? undefined : '500',
+                      fontWeight: (useLinoteeFont ? undefined : '500') as any,
                     },
                     bold: {
                       fontFamily: useLinoteeFont ? 'Linotee' : 'Inter_700Bold',
-                      fontWeight: useLinoteeFont ? undefined : '700',
+                      fontWeight: (useLinoteeFont ? undefined : '700') as any,
                     },
                     heavy: {
                       fontFamily: useLinoteeFont ? 'Linotee' : 'Inter_800ExtraBold',
-                      fontWeight: useLinoteeFont ? undefined : '800',
+                      fontWeight: (useLinoteeFont ? undefined : '800') as any,
                     },
                   },
                   dark: true,

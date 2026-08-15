@@ -306,8 +306,8 @@ const About = () => {
           contentContainerStyle={{
             paddingTop:
               Platform.OS === 'android'
-                ? (StatusBar.currentHeight || 20) + 90
-                : 130,
+                ? (StatusBar.currentHeight || 20) + 70
+                : 110,
             paddingBottom: 60,
           }}
           showsVerticalScrollIndicator={false}>
@@ -350,19 +350,21 @@ const About = () => {
             <View style={{flexDirection: 'row'}}>
               <AppText
                 style={{
-                  fontSize: 28,
-                  fontWeight: 'bold',
-                  color: '#38bdf8', // Primary
+                  fontSize: 32,
+                  fontFamily: 'BebasNeue',
+                  color: '#E50914', // Netflix Red
+                  letterSpacing: 1, // Slight spacing for Bebas
                 }}>
-                Air
+                AIR
               </AppText>
               <AppText
                 style={{
-                  fontSize: 28,
-                  fontWeight: 'bold',
-                  color: '#818cf8', // Secondary
+                  fontSize: 32,
+                  fontFamily: 'BebasNeue',
+                  color: '#FFFFFF', // White
+                  letterSpacing: 1, // Slight spacing for Bebas
                 }}>
-                Flix
+                FLIX
               </AppText>
             </View>
 
@@ -418,7 +420,8 @@ const About = () => {
               style={{
                 fontFamily: Platform.OS === 'android' ? 'monospace' : 'Courier',
                 fontWeight: 'bold',
-                color: '#818cf8',
+                color: '#FFFFFF',
+                marginTop: 16,
                 marginBottom: 20,
               }}>
               Dev By DxV STUDIO 亗

@@ -1,3 +1,4 @@
+import AppText from '../components/ui/Text';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import React from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
@@ -41,17 +42,17 @@ const PlayerMenuRow = ({
       />
     )}
     <View className="min-w-0 flex-1">
-      <Text
+      <AppText
         className="text-base font-semibold text-white"
         numberOfLines={1}>
         {title}
-      </Text>
+      </AppText>
       {!!detail && (
-        <Text
+        <AppText
           className="mt-0.5 text-xs text-white/55"
           numberOfLines={1}>
           {detail}
-        </Text>
+        </AppText>
       )}
     </View>
     {selected && (

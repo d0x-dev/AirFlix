@@ -1,3 +1,4 @@
+import AppText from '../../components/ui/Text';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import type {CompositeScreenProps} from '@react-navigation/native';
@@ -134,16 +135,16 @@ const DownloadedDetails = ({navigation, route}: DownloadedDetailsProps) => {
   if (!group) {
     return (
       <View className="flex-1 items-center justify-center bg-black px-6">
-        <Text className="text-center text-white/70">
+        <AppText className="text-center text-white/70">
           This downloaded title is no longer available.
-        </Text>
+        </AppText>
         <TouchableOpacity
           className="mt-5 px-6 py-3"
           style={{backgroundColor: primary}}
           onPress={() => navigation.goBack()}>
-          <Text className="font-semibold" style={{color: colors.onPrimary}}>
+          <AppText className="font-semibold" style={{color: colors.onPrimary}}>
             Go back
-          </Text>
+          </AppText>
         </TouchableOpacity>
       </View>
     );
@@ -247,18 +248,18 @@ const DownloadedDetails = ({navigation, route}: DownloadedDetailsProps) => {
             />
           </Pressable>
           <View className="absolute bottom-3 right-0 w-full px-5">
-            <Text
+            <AppText
               className="text-3xl font-bold capitalize"
               style={{color: colors.onBackground}}>
               {group.title}
-            </Text>
+            </AppText>
             <View className="mt-3 flex-row items-center">
               <MaterialCommunityIcons
                 name="download-circle-outline"
                 size={18}
                 color={colors.primary}
               />
-              <Text
+              <AppText
                 className="ml-2 text-sm font-medium"
                 style={{color: colors.onSurfaceVariant}}>
                 {`${group.items.length} download${
@@ -266,7 +267,7 @@ const DownloadedDetails = ({navigation, route}: DownloadedDetailsProps) => {
                 }`}
                 {'  '}·{'  '}
                 {formatDownloadBytes(totalBytes)}
-              </Text>
+              </AppText>
             </View>
           </View>
         </View>
@@ -274,16 +275,16 @@ const DownloadedDetails = ({navigation, route}: DownloadedDetailsProps) => {
         <View className="bg-black px-5 pb-6 pt-3">
           {metadata.synopsis ? (
             <View className="mb-7">
-              <Text
+              <AppText
                 className="mb-2 text-xl font-bold"
                 style={{color: colors.onBackground}}>
                 Synopsis
-              </Text>
-              <Text
+              </AppText>
+              <AppText
                 className="text-base leading-6"
                 style={{color: colors.onSurfaceVariant}}>
                 {metadata.synopsis}
-              </Text>
+              </AppText>
             </View>
           ) : null}
 
@@ -299,11 +300,11 @@ const DownloadedDetails = ({navigation, route}: DownloadedDetailsProps) => {
             />
           ) : null}
 
-          <Text
+          <AppText
             className="mb-3 mt-7 text-xl font-bold"
             style={{color: colors.onBackground}}>
             Ready to watch
-          </Text>
+          </AppText>
           {items.map((item, index) => (
             <View
               key={item.id}
@@ -323,18 +324,18 @@ const DownloadedDetails = ({navigation, route}: DownloadedDetailsProps) => {
                 onPress={() => playItem(item)}>
                 <DownloadedItemThumbnail item={item} />
                 <View className="ml-3 flex-1">
-                  <Text
+                  <AppText
                     className="font-semibold"
                     style={{color: colors.onSurface}}
                     numberOfLines={1}>
                     {item.episodeName || item.title}
-                  </Text>
-                  <Text
+                  </AppText>
+                  <AppText
                     className="mt-1 text-xs"
                     style={{color: colors.onSurfaceVariant}}>
                     {items.length > 1 ? `Episode ${index + 1}  ·  ` : ''}
                     {formatDownloadBytes(item.totalBytes)}
-                  </Text>
+                  </AppText>
                 </View>
                 <MaterialCommunityIcons
                   name="chevron-right"

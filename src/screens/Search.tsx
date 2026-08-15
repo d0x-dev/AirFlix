@@ -114,7 +114,7 @@ const HistoryItem = memo(
           size={22}
           color={colors.onSurfaceVariant}
         />
-        <Text
+        <AppText
           numberOfLines={1}
           className="flex-1 mx-3"
           style={{
@@ -123,7 +123,7 @@ const HistoryItem = memo(
             fontWeight: '500',
           }}>
           {search}
-        </Text>
+        </AppText>
         <Pressable
           onPress={handleRemove}
           hitSlop={8}

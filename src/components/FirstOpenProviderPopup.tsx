@@ -37,8 +37,14 @@ const FirstOpenProviderPopup = () => {
           <View style={styles.actions}>
             <Pressable
               onPress={() => setVisible(false)}
-              style={({pressed}) => [styles.button, { backgroundColor: pressed ? colors.surfaceContainerHighest : 'transparent' }]}>
-              <AppText role="labelLarge" style={{ color: colors.primary }}>
+              style={({pressed}) => [
+                styles.button,
+                {
+                  backgroundColor: pressed ? colors.surfaceContainerHighest : 'transparent',
+                  marginRight: 8,
+                },
+              ]}>
+              <AppText role="labelLarge" style={{color: colors.onSurfaceVariant}}>
                 Close
               </AppText>
             </Pressable>
@@ -48,8 +54,15 @@ const FirstOpenProviderPopup = () => {
                 // Navigate to Extensions screen to manage providers
                 navigation.navigate('SettingsStack', {screen: 'Extensions'});
               }}
-              style={({pressed}) => [styles.button, styles.primaryButton, { backgroundColor: colors.primary, opacity: pressed ? 0.8 : 1 }]}>
-              <AppText role="labelLarge" style={{ color: colors.onPrimary }}>
+              style={({pressed}) => [
+                styles.button,
+                styles.primaryButton,
+                {
+                  backgroundColor: '#38bdf8', // Light blue accent color
+                  opacity: pressed ? 0.8 : 1,
+                },
+              ]}>
+              <AppText role="labelLarge" style={{color: '#000000', fontWeight: 'bold'}}>
                 Providers
               </AppText>
             </Pressable>

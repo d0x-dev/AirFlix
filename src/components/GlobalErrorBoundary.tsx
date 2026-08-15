@@ -1,3 +1,4 @@
+import AppText from '../components/ui/Text';
 import React from 'react';
 import {
   View,
@@ -213,38 +214,38 @@ const ErrorFallbackUI: React.FC<ErrorFallbackUIProps> = ({
             <Ionicons name="warning" size={40} color="#ef4444" />
           </View>
 
-          <Text className="text-white text-2xl font-bold text-center mb-2">
+          <AppText className="text-white text-2xl font-bold text-center mb-2">
             Oops! Something went wrong
-          </Text>
+          </AppText>
 
-          <Text className="text-gray-400 text-base text-center leading-6">
+          <AppText className="text-gray-400 text-base text-center leading-6">
             The app encountered an unexpected error and needs to restart.
-          </Text>
+          </AppText>
         </View>
 
         <View className="bg-gray-900 rounded-lg p-4 mb-6">
-          <Text className="text-red-400 text-sm font-medium mb-2">
+          <AppText className="text-red-400 text-sm font-medium mb-2">
             Error Details:
-          </Text>
-          <Text className="text-gray-300 text-sm">
+          </AppText>
+          <AppText className="text-gray-300 text-sm">
             {error.message || 'Unknown error occurred'}
-          </Text>
+          </AppText>
         </View>
 
         {showDetails && (
           <View className="bg-gray-900 rounded-lg p-4 mb-6">
-            <Text className="text-orange-400 text-sm font-medium mb-2">
+            <AppText className="text-orange-400 text-sm font-medium mb-2">
               Technical Details:
-            </Text>
+            </AppText>
             <ScrollView className="max-h-32">
-              <Text className="text-gray-400 text-xs font-mono">
+              <AppText className="text-gray-400 text-xs font-mono">
                 {error.stack}
-              </Text>
+              </AppText>
               {errorInfo?.componentStack && (
-                <Text className="text-gray-500 text-xs font-mono mt-2">
+                <AppText className="text-gray-500 text-xs font-mono mt-2">
                   Component Stack:{'\n'}
                   {errorInfo.componentStack}
-                </Text>
+                </AppText>
               )}
             </ScrollView>
           </View>
@@ -257,9 +258,9 @@ const ErrorFallbackUI: React.FC<ErrorFallbackUIProps> = ({
             activeOpacity={0.8}>
             <View className="flex-row items-center">
               <Ionicons name="refresh" size={20} color="white" />
-              <Text className="text-white font-semibold text-base ml-2">
+              <AppText className="text-white font-semibold text-base ml-2">
                 Restart App
-              </Text>
+              </AppText>
             </View>
           </TouchableOpacity>
 
@@ -270,11 +271,11 @@ const ErrorFallbackUI: React.FC<ErrorFallbackUIProps> = ({
             activeOpacity={0.8}>
             <View className="flex-row items-center">
               <Ionicons name="arrow-back" size={20} color={primary} />
-              <Text
+              <AppText
                 className="font-semibold text-base ml-2"
                 style={{color: primary}}>
                 Try Again
-              </Text>
+              </AppText>
             </View>
           </TouchableOpacity>
 
@@ -289,9 +290,9 @@ const ErrorFallbackUI: React.FC<ErrorFallbackUIProps> = ({
                   size={16}
                   color="#9ca3af"
                 />
-                <Text className="text-gray-400 text-sm ml-2">
+                <AppText className="text-gray-400 text-sm ml-2">
                   {showDetails ? 'Hide' : 'Show'} Details
-                </Text>
+                </AppText>
               </View>
             </TouchableOpacity>
 
@@ -301,20 +302,20 @@ const ErrorFallbackUI: React.FC<ErrorFallbackUIProps> = ({
               activeOpacity={0.8}>
               <View className="flex-row items-center">
                 <Ionicons name="bug" size={16} color="#9ca3af" />
-                <Text className="text-gray-400 text-sm ml-2">Report</Text>
+                <AppText className="text-gray-400 text-sm ml-2">Report</AppText>
               </View>
             </TouchableOpacity>
           </View>
         </View>
 
         <View className="mt-8 pt-6 border-t border-gray-800">
-          <Text className="text-gray-500 text-xs text-center">
+          <AppText className="text-gray-500 text-xs text-center">
             App Version: {Application.nativeApplicationVersion} (
             {Application.nativeBuildVersion})
-          </Text>
-          <Text className="text-gray-600 text-xs text-center mt-1">
+          </AppText>
+          <AppText className="text-gray-600 text-xs text-center mt-1">
             If this keeps happening, report on github or discord
-          </Text>
+          </AppText>
         </View>
       </ScrollView>
     </View>
