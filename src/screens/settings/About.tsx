@@ -268,11 +268,10 @@ const About = () => {
             paddingTop:
               Platform.OS === 'android' ? (StatusBar.currentHeight || 20) : 45,
             paddingBottom: 20,
-            backgroundColor: '#141517f0', // Slight transparency for blur effect
+            backgroundColor: '#000000', // Fully black
             borderBottomLeftRadius: 30,
             borderBottomRightRadius: 30,
-            borderBottomWidth: 0.6,
-            borderColor: '#ffffff30',
+            borderBottomWidth: 0,
             flexDirection: 'row',
             alignItems: 'center',
             justifyContent: 'space-between',
