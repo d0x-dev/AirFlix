@@ -133,7 +133,6 @@ We'd love your contributions! Here's how to help:
 
 - 📧 Have questions? Open an [Issue](https://github.com/d0x-dev/AirFlix/issues)
 - 🐛 Found a bug? Report it [here](https://github.com/d0x-dev/AirFlix/issues/new)
-- 💬 Join our Discord [Community](https://discord.gg/cr42m6maWy)
 
 ---
 
