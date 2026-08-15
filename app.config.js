@@ -119,7 +119,7 @@ module.exports = () => {
       autolinking: {exclude: ['expo-splash-screen']},
       plugins,
       slug: 'airflix',
-      version: '4.0.4',
+      version: '1.0.0',
       userInterfaceStyle: 'dark',
       experiments: {
         reactCompiler: true,

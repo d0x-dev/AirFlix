@@ -1,6 +1,6 @@
 {
   "name": "airflix",
-  "version": "4.0.4",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "android": "npm run build:sandbox && expo run:android",
