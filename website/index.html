@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="An advanced Ad-Free Media Streaming client built with Material Design 3 for Android & Windows">
+    <meta name="description" content="An advanced Ad-Free Media Streaming client built with Material Design 3 for Android">
     <title>AirFlix — Next-Gen Media Streaming App</title>
 
     <link rel="stylesheet" href="css/styles.css?v=6.2.1">
@@ -250,7 +250,7 @@
 
                     <h1 class="font-display-lg text-display-lg text-primary mb-6 leading-tight">AirFlix</h1>
                     <p class="font-headline-md text-headline-md text-on-surface-variant mb-10 max-w-xl" data-i18n="hero_subtitle">
-                        An advanced Ad-Free Media Streaming client built with Material Design 3 for Android &amp; Windows.
+                        An advanced Ad-Free Media Streaming client built with Material Design 3 for Android.
                     </p>
 
                     <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
@@ -292,7 +292,7 @@
                             <span class="material-symbols-outlined">movie</span>
                         </div>
                         <h3 class="font-title-md text-on-surface mb-2">Advanced Media Engine</h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed">Offers a modern and elegant movie and TV show streaming experience on Android and Windows with an intuitive interface.</p>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">Offers a modern and elegant movie and TV show streaming experience on Android with an intuitive interface.</p>
                     </div>
 
                     <div class="glass-card p-6 rounded-lg hover:bg-surface-container-high transition-colors">
@@ -392,7 +392,7 @@
                 <div class="max-w-xl text-center md:text-left">
                     <span class="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm mb-6" data-i18n="oss_chip">COMMUNITY DRIVEN</span>
                     <h2 class="font-headline-lg text-headline-lg text-on-surface mb-6" data-i18n="oss_title">Open Source at its Heart</h2>
-                    <p class="text-on-surface-variant font-body-lg mb-8" data-i18n="oss_desc">AirFlix is built by movie lovers for movie lovers. Contribute, customize, and help us build the best open-source media player for Android &amp; Windows.</p>
+                    <p class="text-on-surface-variant font-body-lg mb-8" data-i18n="oss_desc">AirFlix is built by movie lovers for movie lovers. Contribute, customize, and help us build the best open-source media player for Android.</p>
                     <div class="flex flex-wrap gap-4 justify-center md:justify-start">
                         <a href="https://github.com/d0x-dev/AirFlix" target="_blank" class="flex items-center gap-2 bg-on-surface text-surface px-8 py-3 rounded-full font-label-lg active:scale-95 transition-all no-underline">
                             <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; font-size:20px">star</span>
@@ -664,40 +664,40 @@
                         </div>
                     </div>
 
-                    <!-- Windows Card -->
-                    <div class="glass-card rounded-xl p-8 border border-white/5">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="w-12 h-12 rounded-full bg-primary-container/20 text-primary flex items-center justify-center flex-shrink-0">
-                                <span class="material-symbols-outlined">laptop_windows</span>
+                    
+                    <!-- Windows Card (Disabled) -->
+                    <div class="glass-card rounded-3xl p-8 flex flex-col h-full border border-white/5 relative overflow-hidden" style="background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.02) 10px, rgba(255,255,255,0.02) 20px), var(--surface-container-low);">
+                        <div class="flex items-center gap-4 mb-6 relative z-10">
+                            <div class="w-12 h-12 rounded-xl bg-surface flex items-center justify-center flex-shrink-0 opacity-50">
+                                <span class="material-symbols-outlined text-on-surface-variant">laptop_windows</span>
                             </div>
-                            <div>
+                            <div class="opacity-50">
                                 <h3 class="font-title-lg text-on-surface">Windows</h3>
-                                <p class="text-on-surface-variant text-sm" data-i18n="windows_card_sub">Download the executable installer for PC.</p>
+                                <p class="text-on-surface-variant text-sm">Development is currently closed.</p>
                             </div>
                         </div>
 
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="version-chip version-chip--stable" data-i18n="windows_chip">Windows Build</span>
-                            <span id="windows-version-badge" class="version-chip">v5.7.0</span>
+                        <div class="flex gap-2 mb-6 relative z-10">
+                            <span class="version-chip" style="background: rgba(255,255,255,0.05); color: var(--on-surface-variant);">Closed</span>
+                            <span class="version-chip" style="background: rgba(255,255,255,0.05); color: var(--on-surface-variant);">Not Available</span>
                         </div>
 
-                        <div class="flex flex-wrap gap-6 mb-8">
-                            <button id="windows-changelog-trigger" class="flex items-center gap-2 text-primary hover:text-on-primary-container transition-colors font-label-lg">
-                                <span class="material-symbols-outlined" style="font-size:18px">list_alt</span>
-                                <span data-i18n="view_changelog">View Changelog</span>
-                            </button>
-                            <button id="windows-versions-trigger" class="flex items-center gap-2 text-primary hover:text-on-primary-container transition-colors font-label-lg">
+                        <div class="flex gap-6 mb-8 relative z-10">
+                            <div class="flex items-center gap-2 text-on-surface-variant/50 font-label-lg cursor-not-allowed">
+                                <span class="material-symbols-outlined" style="font-size:18px">article</span>
+                                View Changes
+                            </div>
+                            <div class="flex items-center gap-2 text-on-surface-variant/50 font-label-lg cursor-not-allowed">
                                 <span class="material-symbols-outlined" style="font-size:18px">history</span>
-                                <span data-i18n="previous_versions">Previous Versions</span>
-                            </button>
+                                Previous Versions
+                            </div>
                         </div>
 
-                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-6 border-t border-white/10">
-                            <a id="windows-download-btn" href="https://github.com/d0x-dev/AirFlix/releases/download/5.7.0/AirFlix-v5.7.0-setup.exe" target="_blank" class="flex items-center gap-3 bg-primary text-on-primary px-8 py-3 rounded-full font-label-lg ambient-glow hover:brightness-110 active:scale-95 transition-all no-underline">
-                                <span class="material-symbols-outlined">download</span>
-                                <span id="windows-download-text" data-i18n="windows_download_text">Download Windows (.exe)</span>
-                            </a>
-                            <p class="text-on-surface-variant font-label-sm" data-i18n="windows_req">Requires Windows 10/11</p>
+                        <div class="mt-auto pt-6 border-t border-white/5 relative z-10">
+                            <button disabled class="w-full flex items-center justify-center gap-3 px-8 py-3 rounded-full font-label-lg transition-all" style="background: rgba(255,255,255,0.05); color: var(--on-surface-variant); cursor: not-allowed;">
+                                <span class="material-symbols-outlined">block</span>
+                                <span>Not Available</span>
+                            </button>
                         </div>
                     </div>
 
