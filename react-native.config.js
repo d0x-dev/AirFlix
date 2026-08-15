@@ -28,4 +28,5 @@ module.exports = {
       platforms: disableFirebase,
     },
   },
+  assets: ['./assets/fonts/'],
 };
