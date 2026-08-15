@@ -1,0 +1,20 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Airflix Metro 8082",
+			"type": "shell",
+			"command": "npx",
+			"args": [
+				"expo",
+				"start",
+				"--dev-client",
+				"--port",
+				"8082"
+			],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}

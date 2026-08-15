@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      Notifee resolves small icons from the application package. This alias
+      exposes Android's built-in animated download icon under an app resource
+      name while keeping the framework drawable as the actual implementation.
+    -->
+    <item name="ic_download_notification_system" type="drawable">@android:drawable/stat_sys_download</item>
+</resources>

@@ -1,0 +1,7 @@
+{
+  "servers": {
+    "airflix-providers": {
+      "url": "https://d0x-dev.gitmcp.io/airflix-providers"
+    }
+  }
+}
