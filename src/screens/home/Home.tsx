@@ -25,6 +25,7 @@ import AppText from '../../components/ui/Text';
 import {useM3Colors} from '../../theme/M3PaletteContext';
 import ContinueWatching from '../../components/ContinueWatching';
 import StatusBarScrim from '../../components/ui/StatusBarScrim';
+import FirstOpenProviderPopup from '../../components/FirstOpenProviderPopup';
 
 type Props = NativeStackScreenProps<HomeStackParamList, 'Home'>;
 
@@ -177,6 +178,7 @@ const Home = ({}: Props) => {
   return (
     <QueryErrorBoundary>
       <AmbientBackground>
+        <FirstOpenProviderPopup />
         <GestureHandlerRootView style={{flex: 1}}>
           <StatusBarScrim visible={statusBarScrimVisible} />
           <SafeAreaView className="flex-1">

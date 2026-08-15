@@ -10,6 +10,8 @@ import {
  * Storage keys for settings
  */
 export enum SettingsKeys {
+  HAS_SHOWN_PROVIDER_POPUP = 'hasShownProviderPopup',
+  PROVIDER_CONFIG = 'providerConfig',
   // UI preferences
   PRIMARY_COLOR = 'primaryColor',
   IS_CUSTOM_THEME = 'isCustomTheme',
@@ -67,6 +69,14 @@ export enum SettingsKeys {
  * Settings storage manager
  */
 export class SettingsStorage {
+  hasShownProviderPopup(): boolean {
+    return mainStorage.getBool(SettingsKeys.HAS_SHOWN_PROVIDER_POPUP) || false;
+  }
+
+  setHasShownProviderPopup(value: boolean): void {
+    mainStorage.setBool(SettingsKeys.HAS_SHOWN_PROVIDER_POPUP, value);
+  }
+
   // Theme settings
   getPrimaryColor(): string {
     return mainStorage.getString(SettingsKeys.PRIMARY_COLOR) || '#FFFFFF';
