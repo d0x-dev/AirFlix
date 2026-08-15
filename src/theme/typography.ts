@@ -19,7 +19,7 @@ const brand = (
   fontSize,
   lineHeight,
   letterSpacing: 0,
-  fontWeight: emphasized ? '500' : '400',
+  fontWeight: useLinoteeFont ? undefined : (emphasized ? '500' : '400'),
 });
 
 const plain = (
@@ -39,7 +39,7 @@ const plain = (
   fontSize,
   lineHeight,
   letterSpacing,
-  fontWeight,
+  fontWeight: useLinoteeFont ? undefined : fontWeight,
 });
 
 export const getM3Type = (useLinoteeFont: boolean) =>

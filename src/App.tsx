@@ -182,6 +182,7 @@ const App = () => {
   const provider = useContentStore(state => state.provider);
   const {width: windowWidth} = useWindowDimensions();
   const isLargeScreen = windowWidth > 768;
+  const useLinoteeFont = useThemeStore(state => state.useLinoteeFont);
   LogBox.ignoreLogs([
     'You have passed a style to FlashList',
     'new NativeEventEmitter()',
@@ -573,7 +574,7 @@ const App = () => {
     }
   }, []);
 
-  if (isInitializing) {
+  if (isInitializing || !fontsLoaded) {
     return null;
   }
 
@@ -635,20 +636,20 @@ const App = () => {
                 theme={{
                   fonts: {
                     regular: {
-                      fontFamily: 'Inter_400Regular',
-                      fontWeight: '400',
+                      fontFamily: useLinoteeFont ? 'Linotee' : 'Inter_400Regular',
+                      fontWeight: useLinoteeFont ? undefined : '400',
                     },
                     medium: {
-                      fontFamily: 'Inter_500Medium',
-                      fontWeight: '500',
+                      fontFamily: useLinoteeFont ? 'Linotee' : 'Inter_500Medium',
+                      fontWeight: useLinoteeFont ? undefined : '500',
                     },
                     bold: {
-                      fontFamily: 'Inter_700Bold',
-                      fontWeight: '700',
+                      fontFamily: useLinoteeFont ? 'Linotee' : 'Inter_700Bold',
+                      fontWeight: useLinoteeFont ? undefined : '700',
                     },
                     heavy: {
-                      fontFamily: 'Inter_800ExtraBold',
-                      fontWeight: '800',
+                      fontFamily: useLinoteeFont ? 'Linotee' : 'Inter_800ExtraBold',
+                      fontWeight: useLinoteeFont ? undefined : '800',
                     },
                   },
                   dark: true,
