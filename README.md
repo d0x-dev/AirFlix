@@ -1,91 +1,148 @@
-# AirFlix
+<h1 align="center">AirFlix</h1>
 
-An open-source Android application for streaming media without ads, natively built for performance and an immersive experience.
+<div align="center">
 
-### Features
-- **Stream and Download Ad-Free:** Enjoy media uninterrupted.
-- **Multi Audio & External Subs Support:** Customize your playback experience.
-- **WatchList:** Keep track of your favorite movies and shows.
-- **External Player & Downloader Support:** Flexibility to use your preferred tools.
-- **Sync with Desktop App:** Seamlessly handoff between mobile and desktop.
-- **Create Custom Sources:** Build and integrate your own media providers.
+<img src="https://github.com/user-attachments/assets/3befd3ef-81b1-417c-a250-42bbfbae58d6" alt="AirFlix Preview" width="100%"/>
 
-<br>
+### 🚀 Advanced Ad-Free Media Streaming Experience
 
-[![Discord](https://custom-icon-badges.demolab.com/badge/-Join_Discord-6567a5?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/cr42m6maWy)
+**An open-source Android application natively built for performance and immersive media playback.**
 
-___
+[![Latest Release](https://img.shields.io/github/v/release/d0x-dev/AirFlix?style=for-the-badge&logo=github&color=0D1117&labelColor=161B22)](https://github.com/d0x-dev/AirFlix/releases)
+[![License](https://img.shields.io/github/license/d0x-dev/AirFlix?style=for-the-badge&logo=gnu&color=2B3137&labelColor=161B22)](https://github.com/d0x-dev/AirFlix/blob/main/LICENSE)
+[![Android](https://img.shields.io/badge/Platform-Android%206.0+-3DDC84.svg?style=for-the-badge&logo=android&logoColor=white&labelColor=161B22)](https://www.android.com)
+[![GitHub Stars](https://img.shields.io/github/stars/d0x-dev/AirFlix?style=for-the-badge&logo=github&labelColor=161B22)](https://github.com/d0x-dev/AirFlix/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/d0x-dev/AirFlix?style=for-the-badge&logo=github&labelColor=161B22)](https://github.com/d0x-dev/AirFlix/network)
+[![Discord](https://img.shields.io/badge/Discord-Join_Discord-6567a5?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/cr42m6maWy)
 
-## Download ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/d0x-dev/AirFlix/total?link=https%3A%2F%2Fgithub.com%2Fd0x-dev%2FAirFlix%2Freleases&label=Github%20Downloads)
-
-[![Download Apk](https://custom-icon-badges.demolab.com/badge/-Download_From_Github-black?style=for-the-badge&logo=download&logoColor=white)](https://github.com/d0x-dev/AirFlix/releases/latest)
-
-[![Download Apk](https://custom-icon-badges.demolab.com/badge/-Website-tomato?style=for-the-badge&logo=download&logoColor=white)](https://airflix.8man.in/#mobile)
-
-## AirFlix for Desktop 
-https://github.com/d0x-dev/AirFlix-Desktop
-
-<br>
-
-## Add or Create Provider source
-> [!TIP]
-> Follow the guide here https://airflix.8man.in/guide/adding-providers
-
-<br>
-
-<img width="2712" height="1220" alt="Screenshot of AirFlix App" src="https://github.com/user-attachments/assets/3befd3ef-81b1-417c-a250-42bbfbae58d6" />
-
-
-___
-
-## Stack
-<p align="left">
-     
-[![React-Native](https://custom-icon-badges.demolab.com/badge/-React_Native-287aad?style=for-the-badge&logo=react&logoColor=white)](https://reactnative.dev/)
-[![TypeScript](https://custom-icon-badges.demolab.com/badge/Typescript-3078C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![NativeWind](https://custom-icon-badges.demolab.com/badge/Native_Wind-0CA6E9?style=for-the-badge&logo=tailwind&logoColor=white)](https://www.nativewind.dev/)
-[![React-Navigation](https://custom-icon-badges.demolab.com/badge/React_Navigation-6838d9?style=for-the-badge&logo=menu&logoColor=white)](https://reactnavigation.org/)
-[![Expo-Modules](https://custom-icon-badges.demolab.com/badge/Expo_Modules-black?style=for-the-badge&logo=expo&logoColor=white)](https://docs.expo.dev/modules/overview/)
-[![React-Native-Video](https://custom-icon-badges.demolab.com/badge/React_native_video-38d9c9?style=for-the-badge&logo=video&logoColor=white)](https://thewidlarzgroup.github.io/react-native-video/)
-[![MMKV-Storage](https://custom-icon-badges.demolab.com/badge/MMKV_Storage-yellow?style=for-the-badge&logo=zap&logoColor=white)](https://github.com/mrousavy/react-native-mmkv)
-
-</p>
-
-## Build and Dev
-0. Set-up React Native environment if you haven't already. [Guide](https://reactnative.dev/docs/set-up-your-environment)
-
-1. Clone the repository
-   ```bash
-   git clone https://github.com/d0x-dev/AirFlix.git
-   cd AirFlix
-   ```
-2. Install dependencies
-   ```bash
-   npm install
-   ```
-3. Prebuild Native Directories
-   ```bash
-   npx expo prebuild -p android --clean
-   ```
-5. Open Metro Dev Server
-   ```bash
-   npm run android
-   ```
-
-For building a signed APK or AAB, check the official documentation:
-https://reactnative.dev/docs/signed-apk-android
+</div>
 
 ---
+
+## ✨ Features
+
+- 🎬 **Stream and Download Ad-Free** - Enjoy media uninterrupted.
+- 🔊 **Multi Audio & External Subs Support** - Customize your playback experience.
+- 📜 **WatchList** - Keep track of your favorite movies and shows.
+- 🛠️ **External Player & Downloader Support** - Flexibility to use your preferred tools.
+- 💻 **Sync with Desktop App** - Seamlessly handoff between mobile and desktop.
+- 🧩 **Create Custom Sources** - Build and integrate your own media providers.
+
+---
+
+## 🌐 Get Started
+
+| Link | Purpose |
+|------|---------|
+| 🌍 [Official Website](https://airflix.8man.in) | Learn more about AirFlix |
+| 📥 [Download APK](https://github.com/d0x-dev/AirFlix/releases/latest) | Get the latest version |
+| 💻 [AirFlix Desktop](https://github.com/d0x-dev/AirFlix-Desktop) | Get the desktop application |
+| 📚 [Provider Guide](https://airflix.8man.in/guide/adding-providers) | Add or create provider sources |
+
+---
+
+## 👥 Meet the Talented Team
+
+### 💻 Lead Developer & Founder
+
+- <img src="https://avatars.githubusercontent.com/u/218248866?s=400&u=7d12b7d4c3f4cbb804fd5080d26623e7c94f6821&v=4" width="60" style="border-radius: 50%; margin-top: 10px;"/>
+**Darkboy** - Full-Stack Android Developer
+- 🔗 [GitHub](https://github.com/d0x-dev)
+- 🌐 [Website](https://darkboy.pro)
+- 📱 [Telegram](https://t.me/songpy)
+- 📸 [Instagram](https://instagram.com/dark__336)
+
+### 🎨 UI/UX Specialist & Designer
+
+- <img src="https://avatars.githubusercontent.com/u/241423835" width="60" style="border-radius: 50%; margin-top: 10px;"/>
+**Venom** - Creative Design Visionary
+- 🔗 [GitHub](https://github.com/drkvenom786)
+- 🌐 [Website](http://venomx.pro)
+- 🎨 [Portfolio](https://drkvenom786.github.io/webpage/)
+
+---
+
+## 🛠️ Build from Source
+
+Ready to build AirFlix yourself? Follow our comprehensive guide below.
+
+### Prerequisites
+
+- [Node.js (>= 18)](https://nodejs.org/en/)
+- [React Native Environment Setup](https://reactnative.dev/docs/set-up-your-environment)
+- [Git](https://git-scm.com/)
+- Expo CLI
+
+### 🚀 Build Steps
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/d0x-dev/AirFlix.git
+
+# 2. Navigate into the project
+cd AirFlix
+
+# 3. Install dependencies
+npm install
+
+# 4. Prebuild Native Directories
+npx expo prebuild -p android --clean
+
+# 5. Open Metro Dev Server and run
+npm run android
+```
+
+---
+
+## 🏗️ Stack
+
+<p align="left">
+<a href="https://reactnative.dev/"><img src="https://custom-icon-badges.demolab.com/badge/-React_Native-287aad?style=for-the-badge&logo=react&logoColor=white" alt="React-Native"/></a>
+<a href="https://www.typescriptlang.org/"><img src="https://custom-icon-badges.demolab.com/badge/Typescript-3078C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/></a>
+<a href="https://www.nativewind.dev/"><img src="https://custom-icon-badges.demolab.com/badge/Native_Wind-0CA6E9?style=for-the-badge&logo=tailwind&logoColor=white" alt="NativeWind"/></a>
+<a href="https://reactnavigation.org/"><img src="https://custom-icon-badges.demolab.com/badge/React_Navigation-6838d9?style=for-the-badge&logo=menu&logoColor=white" alt="React-Navigation"/></a>
+<a href="https://docs.expo.dev/modules/overview/"><img src="https://custom-icon-badges.demolab.com/badge/Expo_Modules-black?style=for-the-badge&logo=expo&logoColor=white" alt="Expo-Modules"/></a>
+</p>
+
+---
+
 > [!IMPORTANT]
 > **Disclaimer:** AirFlix App does not host, store, or provide any media content. It is not affiliated with or connected to any external providers or extensions. All content accessed through the app is managed and sourced directly by the user via third-party tools or integrations. The developers of AirFlix have no control over this content.
 
+## 🤝 Contributing
 
-## Leave a star if this was helpful!
+We'd love your contributions! Here's how to help:
+
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to the branch (`git push origin feature/amazing-feature`)
+5. **Open** a Pull Request
+
+---
+
+## 💬 Support & Community
+
+- 📧 Have questions? Open an [Issue](https://github.com/d0x-dev/AirFlix/issues)
+- 🐛 Found a bug? Report it [here](https://github.com/d0x-dev/AirFlix/issues/new)
+- 💬 Join our Discord [Community](https://discord.gg/cr42m6maWy)
+
+---
+
+<div align="center">
+
+### Made with ❤️ by the AirFlix Team
+
+⭐ If you love AirFlix, please consider giving us a star on GitHub! ⭐
 
 <a href="https://www.star-history.com/?repos=d0x-dev%2FAirFlix&type=date&legend=top-left">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=d0x-dev/AirFlix&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=d0x-dev/AirFlix&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=d0x-dev/AirFlix&type=date&legend=top-left" />
- </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=d0x-dev/AirFlix&type=date&theme=dark&legend=top-left" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=d0x-dev/AirFlix&type=date&legend=top-left" />
+    <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=d0x-dev/AirFlix&type=date&legend=top-left" width="500"/>
+  </picture>
 </a>
+
+[⬆ Back to Top](#-airflix-)
+
+</div>
