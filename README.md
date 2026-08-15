@@ -42,10 +42,10 @@
 
 | Link | Purpose |
 |------|---------|
-| 🌍 [Official Website](https://airflix.8man.in) | Learn more about AirFlix |
+| 🌍 [Official Website](https://airflix.isbest.org) | Learn more about AirFlix |
 | 📥 [Download APK](https://github.com/d0x-dev/AirFlix/releases/latest) | Get the latest version |
 | 💻 [AirFlix Desktop](https://github.com/d0x-dev/AirFlix-Desktop) | Get the desktop application |
-| 📚 [Provider Guide](https://airflix.8man.in/guide/adding-providers) | Add or create provider sources |
+| 📚 [Provider Guide](https://airflix.isbest.org/guide/adding-providers) | Add or create provider sources |
 
 ---
 
