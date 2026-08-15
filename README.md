@@ -6,7 +6,9 @@
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/d0x-dev/AirFlix/refs/heads/main/uploads/preview1.png" alt="AirFlix Preview" width="100%"/>
+<img src="https://raw.githubusercontent.com/d0x-dev/AirFlix/refs/heads/main/uploads/preview1.png" alt="AirFlix Preview 1" width="100%"/>
+<br>
+<img src="https://raw.githubusercontent.com/d0x-dev/AirFlix/refs/heads/main/uploads/preview2.png" alt="AirFlix Preview 2" width="100%"/>
 
 ### 🚀 Advanced Ad-Free Media Streaming Experience
 

@@ -146,10 +146,15 @@ function App() {
             </div>
           </div>
           
-          <div className="mt-16 relative max-w-5xl mx-auto rounded-3xl overflow-hidden glass-card p-2 shadow-2xl border-white/10">
+          <div className="mt-16 relative max-w-5xl mx-auto rounded-3xl overflow-hidden glass-card p-2 shadow-2xl border-white/10 flex flex-col gap-4">
             <img 
               src="https://raw.githubusercontent.com/d0x-dev/AirFlix/refs/heads/main/uploads/preview1.png" 
-              alt="AirFlix Preview" 
+              alt="AirFlix Preview 1" 
+              className="w-full h-auto rounded-2xl border border-white/5"
+            />
+            <img 
+              src="https://raw.githubusercontent.com/d0x-dev/AirFlix/refs/heads/main/uploads/preview2.png" 
+              alt="AirFlix Preview 2" 
               className="w-full h-auto rounded-2xl border border-white/5"
             />
           </div>
