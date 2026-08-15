@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_screenshots: "Capturas",
             nav_downloads: "Descargas",
             nav_download_btn: "Descargar",
-            hero_subtitle: "Un cliente de YouTube Music con Material Design 3, para Android y Windows.",
+            hero_subtitle: "Un cliente de Streaming de Medios con Material Design 3, para Android.",
             hero_download_apk: "Descargar APK",
             hero_demo_btn: "Probar Demo",
             features_title: "Características",
-            features_subtitle: "Descubre todas las funciones que hacen de AirFlix el mejor cliente para tu música.",
+            features_subtitle: "Descubre todas las funciones que hacen de AirFlix el mejor cliente para tus películas y series.",
             oss_title: "Open Source at its Heart",
-            oss_desc: "AirFlix es construido por amantes de la música para amantes de la música. Contribuye, personaliza y ayúdanos a construir el mejor reproductor de código abierto para Android y Windows.",
+            oss_desc: "AirFlix es construido por amantes de la música para amantes de la música. Contribuye, personaliza y ayúdanos a construir el mejor reproductor de código abierto para Android y .",
             oss_star: "Star en GitHub",
             oss_version_title: "Última versión estable",
             shots_title: "La Interfaz",
@@ -26,16 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
             downloads_subtitle: "Descarga la versión más reciente de AirFlix para tu plataforma.",
             android_card_sub: "Descarga la última versión estable.",
             android_stable_chip: "Versión Estable",
-            windows_card_sub: "Descarga el instalador ejecutable para PC.",
-            windows_chip: "Versión Windows",
+            windows_card_sub: "El desarrollo está actualmente cerrado.",
+            windows_chip: "Versión ",
             view_changelog: "Ver cambios",
             previous_versions: "Versiones anteriores",
             android_download_text: "Descargar APK",
-            windows_download_text: "Descargar Windows (.exe)",
+            windows_download_text: "No Disponible",
             footer_rights: "Todos los derechos reservados.",
             footer_license: "Licenciado bajo la Licencia de Código Abierto GPL-3.0.",
             android_req: "Requiere Android 6.0+",
-            windows_req: "Requiere Windows 10/11",
+            windows_req: "",
             lang_dialog_title: "Seleccionar idioma"
         },
         en: {
@@ -43,13 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_screenshots: "Screenshots",
             nav_downloads: "Downloads",
             nav_download_btn: "Download",
-            hero_subtitle: "An advanced YouTube Music client built with Material Design 3 for Android & Windows.",
+            hero_subtitle: "An advanced Ad-Free Media Streaming client built with Material Design 3 for Android.",
             hero_download_apk: "Download APK",
             hero_demo_btn: "View Demo",
             features_title: "Features",
-            features_subtitle: "Discover all the powerful capabilities that make AirFlix the ultimate music client.",
+            features_subtitle: "Discover all the powerful capabilities that make AirFlix the ultimate media streaming client.",
             oss_title: "Open Source at its Heart",
-            oss_desc: "AirFlix is built by music lovers for music lovers. Contribute, customize, and help us build the best open-source music player for Android & Windows.",
+            oss_desc: "AirFlix is built by movie lovers for movie lovers. Contribute, customize, and help us build the best open-source media player for Android.",
             oss_star: "Star on GitHub",
             oss_version_title: "Latest Stable Version",
             shots_title: "The Interface",
@@ -63,16 +63,16 @@ document.addEventListener('DOMContentLoaded', () => {
             downloads_subtitle: "Download the latest official release of AirFlix for your operating system.",
             android_card_sub: "Download the latest stable Android build.",
             android_stable_chip: "Stable Build",
-            windows_card_sub: "Download the Windows executable installer.",
-            windows_chip: "Windows Build",
+            windows_card_sub: "Download the  executable installer.",
+            windows_chip: " Build",
             view_changelog: "View Changelog",
             previous_versions: "Previous Versions",
             android_download_text: "Download APK",
-            windows_download_text: "Download Windows (.exe)",
+            windows_download_text: "Not Available",
             footer_rights: "All Rights Reserved.",
             footer_license: "Licensed under GNU General Public License v3.0 Open Source License.",
             android_req: "Requires Android 6.0+",
-            windows_req: "Requires Windows 10/11",
+            windows_req: "",
             lang_dialog_title: "Select Language"
         },
         pt: {
@@ -80,13 +80,13 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_screenshots: "Capturas",
             nav_downloads: "Downloads",
             nav_download_btn: "Baixar",
-            hero_subtitle: "Um cliente do YouTube Music com Material Design 3 para Android e Windows.",
+            hero_subtitle: "Um cliente de streaming de mídia com Material Design 3 para Android.",
             hero_download_apk: "Baixar APK",
             hero_demo_btn: "Testar Demo",
             features_title: "Recursos",
             features_subtitle: "Descubra todos os recursos que tornam o AirFlix o melhor cliente para sua música.",
             oss_title: "Código Aberto no Coração",
-            oss_desc: "O AirFlix é construído por amantes da música para amantes da música. Contribua, personalize e ajude-nos a criar o melhor reprodutor para Android e Windows.",
+            oss_desc: "O AirFlix é construído por amantes da música para amantes da música. Contribua, personalize e ajude-nos a criar o melhor reprodutor para Android e .",
             oss_star: "Star no GitHub",
             oss_version_title: "Última versão estável",
             shots_title: "A Interface",
@@ -100,16 +100,16 @@ document.addEventListener('DOMContentLoaded', () => {
             downloads_subtitle: "Baixe a versão mais recente do AirFlix para sua plataforma.",
             android_card_sub: "Baixe a versão estável mais recente para Android.",
             android_stable_chip: "Versão Estável",
-            windows_card_sub: "Baixe o instalador executável para Windows.",
-            windows_chip: "Versão Windows",
+            windows_card_sub: "Baixe o instalador executável para .",
+            windows_chip: "Versão ",
             view_changelog: "Ver alterações",
             previous_versions: "Versões anteriores",
             android_download_text: "Baixar APK",
-            windows_download_text: "Baixar Windows (.exe)",
+            windows_download_text: "Não Disponível",
             footer_rights: "Todos os direitos reservados.",
             footer_license: "Licenciado sob a Licença de Código Aberto GPL-3.0.",
             android_req: "Requer Android 6.0+",
-            windows_req: "Requer Windows 10/11",
+            windows_req: "",
             lang_dialog_title: "Selecionar idioma"
         },
         hi: {
@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tag_name: "5.9.0",
             name: "AirFlix v5.9.0",
             published_at: "2026-07-20T08:00:00Z",
-            body: "### ✨ AirFlix v5.9.0 Release Notes\n- 🎵 **Enhanced YouTube Music Integration**\n- ⚡ Optimización de rendimiento y menor consumo de RAM\n- 🎨 Material Design 3 UI polish and dynamic color updates",
+            body: "### ✨ AirFlix v5.9.0 Release Notes\n- 🎵 **Enhanced Media Streaming Integration**\n- ⚡ Optimización de rendimiento y menor consumo de RAM\n- 🎨 Material Design 3 UI polish and dynamic color updates",
             assets: [
                 { name: "AirFlix_v5.9.0_signed.apk", size: 35000000, browser_download_url: "https://github.com/d0x-dev/AirFlix/releases/download/5.9.0/AirFlix_v5.9.0_signed.apk" }
             ]
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tag_name: "5.7.0",
             name: "AirFlix v5.7.0",
             published_at: "2026-06-15T08:00:00Z",
-            body: "### ✨ AirFlix v5.7.0 Dual Release\n- 💻 **Windows Desktop Setup & Portable Builds**\n- 📱 **Android Signed APK**",
+            body: "### ✨ AirFlix v5.7.0 Dual Release\n- 💻 ** Desktop Setup & Portable Builds**\n- 📱 **Android Signed APK**",
             assets: [
                 { name: "AirFlix-v5.7.0-setup.exe", size: 45000000, browser_download_url: "https://github.com/d0x-dev/AirFlix/releases/download/5.7.0/AirFlix-v5.7.0-setup.exe" },
                 { name: "AirFlix-v5.7.0-potable.exe", size: 42000000, browser_download_url: "https://github.com/d0x-dev/AirFlix/releases/download/5.7.0/AirFlix-v5.7.0-potable.exe" },
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tag_name: "5.6.0",
             name: "AirFlix v5.6.0",
             published_at: "2026-06-01T08:00:00Z",
-            body: "### ✨ AirFlix v5.6.0 Dual Release\n- 💻 **Windows Desktop Executables (.exe)**\n- 📱 **Android Signed APK**",
+            body: "### ✨ AirFlix v5.6.0 Dual Release\n- 💻 ** Desktop Executables (.exe)**\n- 📱 **Android Signed APK**",
             assets: [
                 { name: "AirFlix-v5.6.0-setup.exe", size: 44000000, browser_download_url: "https://github.com/d0x-dev/AirFlix/releases/download/5.6.0/AirFlix-v5.6.0-setup.exe" },
                 { name: "AirFlix-v5.6.0-Potable.exe", size: 41000000, browser_download_url: "https://github.com/d0x-dev/AirFlix/releases/download/5.6.0/AirFlix-v5.6.0-Potable.exe" },
@@ -316,7 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (ossVersionBadge) ossVersionBadge.textContent = `${tag} (${translations[currentLang].oss_version_title || 'Última versión'})`;
         if (androidVersionBadge) androidVersionBadge.textContent = tag;
 
-        // Find latest Windows release
+        // Find latest  release
         const winRelease = allReleases.find(r => r.assets && r.assets.some(a => /\.exe$/i.test(a.name)));
         if (windowsVersionBadge && winRelease) {
             windowsVersionBadge.textContent = formatVersionTag(winRelease.tag_name);
@@ -441,7 +441,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 6. Previous Versions Modal Popup Logic (Android & Windows)
+    // 6. Previous Versions Modal Popup Logic (Android & )
     const versionsTrigger = document.getElementById('versions-trigger');
     const windowsVersionsTrigger = document.getElementById('windows-versions-trigger');
     const versionsDialog = document.getElementById('versions-dialog');
@@ -453,7 +453,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const dialogTitle = versionsDialog.querySelector('.dialog-header h3');
         if (dialogTitle) {
             if (filterPlatform === 'windows') {
-                dialogTitle.innerHTML = `<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">laptop_windows</span> Versiones Anteriores para Windows (.exe)</span>`;
+                dialogTitle.innerHTML = `<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">laptop_windows</span> Versiones Anteriores para  (.exe)</span>`;
             } else if (filterPlatform === 'android') {
                 dialogTitle.innerHTML = `<span class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary">android</span> Versiones Anteriores para Android (.apk)</span>`;
             } else {

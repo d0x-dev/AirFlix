@@ -788,13 +788,98 @@
     </dialog>
 
     <!-- Toast Notification -->
+        </section>
+
+    </main>
+
+    <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+
+    <footer class="bg-slate-950 w-full py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex flex-col lg:flex-row justify-between items-center gap-8 mb-10">
+                <div class="text-center lg:text-left">
+                    <span class="text-xl font-black text-slate-100 font-['Epilogue']">AirFlix</span>
+                    <p class="text-slate-500 font-['Epilogue'] text-sm mt-1">&copy; 2026 <a href="https://darkboy.pro" target="_blank" class="text-violet-300 hover:text-violet-200 no-underline transition-colors">DarkBoy</a> &amp; <a href="https://venomxhub.netlify.app" target="_blank" class="text-violet-300 hover:text-violet-200 no-underline transition-colors">VENOM</a>. <span data-i18n="footer_rights">All Rights Reserved.</span></p>
+                </div>
+
+                <div class="flex flex-wrap gap-3 justify-center">
+                    <a href="https://github.com/d0x-dev" target="_blank" class="footer-chip">
+                        <span class="material-symbols-outlined" style="font-size:16px">developer_mode</span>
+                        Dev
+                    </a>
+                    <a href="https://github.com/d0x-dev/AirFlix" target="_blank" class="footer-chip">
+                        <span class="material-symbols-outlined" style="font-size:16px">code</span>
+                        Source Code
+                    </a>
+                    <a href="https://raw.githubusercontent.com/d0x-dev/AirFlix/main/LICENSE" target="_blank" class="footer-chip">
+                        <span class="material-symbols-outlined" style="font-size:16px">description</span>
+                        License
+                    </a>
+                    <a href="https://t.me/songpy" target="_blank" class="footer-chip">
+                        <span class="material-symbols-outlined" style="font-size:16px">send</span>
+                        Telegram
+                    </a>
+                    <a href="https://crowdin.com/project/airflix" target="_blank" class="footer-chip">
+                        <span class="material-symbols-outlined" style="font-size:16px">translate</span>
+                        Crowdin
+                    </a>
+                    <a href="https://github.com/d0x-dev/AirFlix/issues" target="_blank" class="footer-chip">
+                        <span class="material-symbols-outlined" style="font-size:16px">support</span>
+                        Support
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 text-sm font-['Epilogue']" data-i18n="footer_license">Licensed under GNU General Public License v3.0 Open Source License.</p>
+                <div class="flex gap-6">
+                    <a href="#features" class="text-slate-500 hover:text-violet-200 transition-colors font-['Epilogue'] text-sm no-underline" data-i18n="nav_features">Features</a>
+                    <a href="#downloads" class="text-slate-500 hover:text-violet-200 transition-colors font-['Epilogue'] text-sm no-underline" data-i18n="nav_downloads">Downloads</a>
+                    <a href="https://github.com/d0x-dev/AirFlix" target="_blank" class="text-slate-500 hover:text-violet-200 transition-colors font-['Epilogue'] text-sm no-underline">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Changelog Dialog -->
+    <dialog id="changelog-dialog" class="glass-dialog glass-dialog--large">
+        <div class="dialog-header">
+            <h3 class="text-on-surface font-title-md">Changelog</h3>
+            <button id="close-changelog-btn" class="dialog-icon-btn" onclick="document.getElementById('changelog-dialog').close()">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div id="changelog-content" class="dialog-content dialog-content--scroll">
+            <div class="loading-indicator">
+                <div class="circular-progress"></div>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Previous Versions Dialog -->
+    <dialog id="versions-dialog" class="glass-dialog glass-dialog--large">
+        <div class="dialog-header">
+            <h3 class="text-on-surface font-title-md">Previous Versions</h3>
+            <button id="close-versions-btn" class="dialog-icon-btn" onclick="document.getElementById('versions-dialog').close()">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div id="versions-list" class="dialog-content dialog-content--scroll">
+            <div class="loading-indicator">
+                <div class="circular-progress"></div>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Toast Notification -->
     <div id="downloadToast" class="download-toast">
         <span class="material-symbols-outlined">cloud_download</span>
         <span id="downloadToastMessage"></span>
     </div>
 
     <!-- Script -->
-    <script src="js/app.js?v=6.2.0"></script>
+    <script src="js/app.js?v=6.2.1"></script>
 </body>
 
 </html>
