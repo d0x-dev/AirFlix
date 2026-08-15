@@ -1,0 +1,6 @@
+# robots.txt for AirFlix (https://airflix.app)
+User-agent: *
+Allow: /
+
+# Direct links to sitemap
+Sitemap: https://airflix.app/sitemap.xml
