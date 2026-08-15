@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/d0x-dev/AirFlix/refs/heads/main/uploads/nonbg.png" width="250" alt="AirFlix Logo" />
+</p>
+
 <h1 align="center">AirFlix</h1>
 
 <div align="center">
