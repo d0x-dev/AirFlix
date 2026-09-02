@@ -51,7 +51,9 @@
 
 ## 👥 Meet the Talented Team
 
-https://gravatar.com/kittywinged08204a8ab0.card
+<a href="https://gravatar.com/kittywinged08204a8ab0.card">
+  <img src="YOUR_CARD_IMAGE_URL" width="400">
+</a>
 
 ### 💻 Lead Developer & Founder
 
