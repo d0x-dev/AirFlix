@@ -1,11 +1,57 @@
-import {View, ScrollView, Pressable} from 'react-native';
+import {View, ScrollView, Pressable, Image} from 'react-native';
 import React, {useState} from 'react';
 import {extensionStorage, providersStorage} from '../../lib/storage';
 import {SvgUri} from 'react-native-svg';
+import {MaterialCommunityIcons} from '@expo/vector-icons';
 import AppText from '../../components/ui/Text';
 import SettingsSwitchRow from '../../components/ui/SettingsSwitchRow';
 import Surface from '../../components/ui/Surface';
 import {useM3Colors} from '../../theme/M3PaletteContext';
+
+const DisableProviderIcon = ({
+  icon,
+  providerValue,
+  fallbackColor,
+}: {
+  icon?: string;
+  providerValue: string;
+  fallbackColor: string;
+}) => {
+  const [imageError, setImageError] = useState(false);
+  const isAirflix = providerValue?.toLowerCase() === 'airflix';
+
+  if (isAirflix) {
+    return (
+      <Image
+        source={require('../../../assets/icon.png')}
+        style={{width: 28, height: 28, borderRadius: 8}}
+        resizeMode="cover"
+      />
+    );
+  }
+
+  if (icon && !imageError) {
+    if (icon.endsWith('.svg')) {
+      return <SvgUri width={24} height={24} uri={icon} />;
+    }
+    return (
+      <Image
+        source={{uri: icon}}
+        style={{width: 28, height: 28, borderRadius: 8}}
+        resizeMode="cover"
+        onError={() => setImageError(true)}
+      />
+    );
+  }
+
+  return (
+    <MaterialCommunityIcons
+      name="web"
+      size={24}
+      color={fallbackColor}
+    />
+  );
+};
 
 const DisableProviders = () => {
   const colors = useM3Colors();
@@ -69,9 +115,13 @@ const DisableProviders = () => {
               }}>
               <View className="ml-4 flex-row items-center">
                 <View
-                  className="mr-1 h-11 w-11 items-center justify-center rounded-2xl"
+                  className="mr-1 h-11 w-11 items-center justify-center overflow-hidden rounded-2xl"
                   style={{backgroundColor: colors.secondaryContainer}}>
-                  <SvgUri width={24} height={24} uri={provider.icon} />
+                  <DisableProviderIcon
+                    icon={provider.icon}
+                    providerValue={provider.value}
+                    fallbackColor={colors.onSecondaryContainer}
+                  />
                 </View>
               </View>
               <View className="flex-1">

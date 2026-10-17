@@ -117,6 +117,49 @@ const MetadataChip = ({
   );
 };
 
+const ProviderLogo = ({
+  icon,
+  providerValue,
+  active,
+}: {
+  icon?: string;
+  providerValue: string;
+  active: boolean;
+}) => {
+  const colors = useM3Colors();
+  const [imageFailed, setImageFailed] = React.useState(false);
+  const isAirflix = providerValue?.toLowerCase() === 'airflix';
+
+  if (isAirflix) {
+    return (
+      <Image
+        source={require('../../../../assets/icon.png')}
+        className="h-full w-full"
+        resizeMode="cover"
+      />
+    );
+  }
+
+  if (icon && !imageFailed) {
+    return (
+      <Image
+        source={{uri: icon}}
+        className="h-full w-full"
+        resizeMode="cover"
+        onError={() => setImageFailed(true)}
+      />
+    );
+  }
+
+  return (
+    <MaterialCommunityIcons
+      name="web"
+      size={32}
+      color={active ? colors.onPrimary : colors.onSurface}
+    />
+  );
+};
+
 const ProviderCard = ({
   provider,
   itemKey,
@@ -157,19 +200,11 @@ const ProviderCard = ({
               : colors.surfaceContainerHighest,
             borderRadius: 18,
           }}>
-          {provider.icon ? (
-            <Image
-              source={{uri: provider.icon}}
-              className="h-full w-full"
-              resizeMode="cover"
-            />
-          ) : (
-            <MaterialCommunityIcons
-              name="web"
-              size={32}
-              color={active ? colors.onPrimary : colors.onSurface}
-            />
-          )}
+          <ProviderLogo
+            icon={provider.icon}
+            providerValue={provider.value}
+            active={active}
+          />
         </View>
 
         <View className="ml-3 min-w-0 flex-1">

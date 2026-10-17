@@ -485,7 +485,7 @@ export class ExtensionManager {
               url: 'https://raw.githubusercontent.com/d0x-dev/airflix-providers/refs/heads/main'
             },
             version: '2.27',
-            icon: '',
+            icon: 'https://cdn.jsdelivr.net/gh/d0x-dev/airflix-providers@main/assets/airflix.png',
             disabled: false,
             type: 'global',
             installed: true
