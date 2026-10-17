@@ -6,7 +6,7 @@ import {
   ProviderSource,
 } from '../storage/extensionStorage';
 import {mainStorage} from '../storage/StorageService';
-import {createProviderSource} from '../utils/helpers';
+import {createProviderSource, getFallbackSourceUrl} from '../utils/helpers';
 /**
  * Extension manager service for handling dynamic provider loading
  */
@@ -118,16 +118,45 @@ export class ExtensionManager {
         ? `${this.baseUrlTestMode}/manifest.json`
         : this.getManifest(activeSource.url);
       console.log('Fetching manifest from:', manifestUrl);
-      let response;
-      response = await axios.get(manifestUrl, {
-        timeout: 10000,
-      });
 
-      if (!response.data || !Array.isArray(response.data)) {
+      let rawData: any = null;
+      try {
+        const response = await axios.get(manifestUrl, {
+          timeout: 10000,
+          responseType: 'json',
+        });
+        rawData = response.data;
+      } catch (primaryError) {
+        const fallbackBase = getFallbackSourceUrl(activeSource.url);
+        if (fallbackBase && !this.testMode) {
+          const fallbackUrl = this.getManifest(fallbackBase);
+          console.log(
+            'Primary manifest fetch failed, trying CDN fallback:',
+            fallbackUrl,
+          );
+          const fallbackResponse = await axios.get(fallbackUrl, {
+            timeout: 10000,
+            responseType: 'json',
+          });
+          rawData = fallbackResponse.data;
+        } else {
+          throw primaryError;
+        }
+      }
+
+      if (typeof rawData === 'string') {
+        try {
+          rawData = JSON.parse(rawData);
+        } catch {
+          // Keep raw data if parsing fails
+        }
+      }
+
+      if (!rawData || !Array.isArray(rawData)) {
         throw new Error('Invalid manifest format');
       }
 
-      const providers: ProviderExtension[] = response.data.map((item: any) => ({
+      const providers: ProviderExtension[] = rawData.map((item: any) => ({
         value: item.value,
         display_name: item.display_name,
         disabled: item.disabled || false,
@@ -179,13 +208,35 @@ export class ExtensionManager {
           const url = `${sourceUrl}/dist/${providerValue}/${fileName}.js`;
           console.log(`Downloading: ${url}`);
 
-          let response;
-          response = await axios.get(url, {
-            timeout: 15000,
-          });
+          let fileData: any = null;
+          try {
+            const response = await axios.get(url, {
+              timeout: 15000,
+              transformResponse: [data => data],
+            });
+            fileData = response.data;
+          } catch (primaryErr) {
+            const fallbackBase = getFallbackSourceUrl(sourceUrl);
+            if (fallbackBase) {
+              const fallbackUrl = `${fallbackBase}/dist/${providerValue}/${fileName}.js`;
+              console.log(
+                `Primary download failed, trying CDN fallback: ${fallbackUrl}`,
+              );
+              const fallbackResponse = await axios.get(fallbackUrl, {
+                timeout: 15000,
+                transformResponse: [data => data],
+              });
+              fileData = fallbackResponse.data;
+            } else {
+              throw primaryErr;
+            }
+          }
 
-          if (response.data) {
-            modules[fileName] = response.data;
+          if (fileData) {
+            modules[fileName] =
+              typeof fileData === 'string'
+                ? fileData
+                : JSON.stringify(fileData);
           }
         } catch (error) {
           // Only log error for required files
@@ -415,10 +466,12 @@ export class ExtensionManager {
     try {
       this.migrateLegacyCustomProviderSource();
 
-      const isFirstLaunch = mainStorage.getBool('isFirstLaunch', true);
-      if (isFirstLaunch && extensionStorage.getProviderSources().length === 0) {
-                // Pre-add d0x-dev source
-        extensionStorage.addProviderSources('d0x-dev', 'https://raw.githubusercontent.com/d0x-dev/airflix-providers/refs/heads/main');
+      if (extensionStorage.getProviderSources().length === 0) {
+        // Pre-add d0x-dev source
+        extensionStorage.addProviderSources(
+          'd0x-dev',
+          'https://raw.githubusercontent.com/d0x-dev/airflix-providers/refs/heads/main',
+        );
         extensionStorage.setDefaultProviderSource('d0x-dev');
 
         // Pre-install airflix provider from memory bundle

@@ -34,7 +34,7 @@ const parseRawGithubUrl = (url: URL): ParsedGithubSource | null => {
   }
 
   const segments = url.pathname.split('/').filter(Boolean);
-  if (segments.length < 4) {
+  if (segments.length < 3) {
     return null;
   }
 
@@ -48,6 +48,8 @@ const parseRawGithubUrl = (url: URL): ParsedGithubSource | null => {
     segments.length > 4
   ) {
     branch = decodeURIComponent(segments.slice(4).join('/'));
+  } else if (segments.length >= 3) {
+    branch = decodeURIComponent(segments.slice(2).join('/'));
   }
 
   if (!author || !repo) {
@@ -55,6 +57,20 @@ const parseRawGithubUrl = (url: URL): ParsedGithubSource | null => {
   }
 
   return {author, repo, branch};
+};
+
+export const getFallbackSourceUrl = (sourceUrl: string): string | null => {
+  try {
+    const parsed = new URL(sourceUrl);
+    const parsedSource =
+      parseRawGithubUrl(parsed) || parseGithubRepoUrl(parsed);
+    if (parsedSource) {
+      return `https://cdn.jsdelivr.net/gh/${parsedSource.author}/${parsedSource.repo}@${parsedSource.branch}`;
+    }
+  } catch {
+    // Ignore invalid URLs
+  }
+  return null;
 };
 
 const parseGithubRepoUrl = (url: URL): ParsedGithubSource | null => {
